@@ -1,0 +1,121 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_Mat_exit73_pro'
+================================================================
+* Date:           Thu Apr 23 12:10:17 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        fast
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 3.401 ns |   2.70 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        0|        0|   0 ns   |   0 ns   |    0|    0|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 0
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 1
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 3.40>
+ST_1 : Operation 2 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i12* %src_cols_cast2_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 2 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i12* %src_rows_cast1_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 3 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %src_mat_cols_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 4 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %src_mat_rows_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 5 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %threshold_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%threshold_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %threshold)" [xf_fast_accel.cpp:60]   --->   Operation 7 'read' 'threshold_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%src_cols_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %src_cols)" [xf_fast_accel.cpp:60]   --->   Operation 8 'read' 'src_cols_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%src_rows_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %src_rows)" [xf_fast_accel.cpp:60]   --->   Operation 9 'read' 'src_rows_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (3.40ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %threshold_out, i32 %threshold_read)" [xf_fast_accel.cpp:60]   --->   Operation 10 'write' <Predicate = true> <Delay = 3.40> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 0> <FIFO>
+ST_1 : Operation 11 [1/1] (3.40ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %src_mat_rows_out, i32 %src_rows_read)" [../vitis_lib/vision/L1/include/common/xf_structs.hpp:506->../vitis_lib/vision/L1/include/common/xf_structs.hpp:650->../vitis_lib/vision/L1/include/common/xf_structs.hpp:651->xf_fast_accel.cpp:51->xf_fast_accel.cpp:60]   --->   Operation 11 'write' <Predicate = true> <Delay = 3.40> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 0> <FIFO>
+ST_1 : Operation 12 [1/1] (3.40ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %src_mat_cols_out, i32 %src_cols_read)" [../vitis_lib/vision/L1/include/common/xf_structs.hpp:507->../vitis_lib/vision/L1/include/common/xf_structs.hpp:650->../vitis_lib/vision/L1/include/common/xf_structs.hpp:651->xf_fast_accel.cpp:51->xf_fast_accel.cpp:60]   --->   Operation 12 'write' <Predicate = true> <Delay = 3.40> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 0> <FIFO>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%trunc_ln65 = trunc i32 %src_rows_read to i12" [xf_fast_accel.cpp:65->xf_fast_accel.cpp:60]   --->   Operation 13 'trunc' 'trunc_ln65' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%trunc_ln65_1 = trunc i32 %src_cols_read to i12" [xf_fast_accel.cpp:65->xf_fast_accel.cpp:60]   --->   Operation 14 'trunc' 'trunc_ln65_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (3.40ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i12P(i12* %src_rows_cast1_out_out, i12 %trunc_ln65)" [xf_fast_accel.cpp:65->xf_fast_accel.cpp:60]   --->   Operation 15 'write' <Predicate = true> <Delay = 3.40> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 0> <FIFO>
+ST_1 : Operation 16 [1/1] (3.40ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i12P(i12* %src_cols_cast2_out_out, i12 %trunc_ln65_1)" [xf_fast_accel.cpp:65->xf_fast_accel.cpp:60]   --->   Operation 16 'write' <Predicate = true> <Delay = 3.40> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 12> <Depth = 0> <FIFO>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "ret void" [xf_fast_accel.cpp:60]   --->   Operation 17 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 3.4ns
+The critical path consists of the following:
+	wire read on port 'threshold' (xf_fast_accel.cpp:60) [14]  (0 ns)
+	fifo write on port 'threshold_out' (xf_fast_accel.cpp:60) [17]  (3.4 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

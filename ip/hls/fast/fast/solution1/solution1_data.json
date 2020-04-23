@@ -1,0 +1,963 @@
+{
+  "Top": "fast_accel",
+  "RtlTop": "fast_accel",
+  "RtlPrefix": "",
+  "SourceLanguage": "cpp",
+  "ResetStyle": "control",
+  "GenerateBdFiles": "1",
+  "HostMachineBits": "64",
+  "Target": {
+    "Family": "zynq",
+    "Device": "xc7z020",
+    "Package": "-clg484",
+    "Speed": "-2"
+  },
+  "HlsSolution": {"Config": [
+      "config_export -description {Fast corner detection IP}",
+      "config_export -display_name=fast_accel2",
+      "config_export -format=ip_catalog"
+    ]},
+  "Args": {
+    "src": {
+      "index": "0",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "axis_t",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "data": {
+            "order": "0",
+            "dataType": "ap_uint",
+            "dataWidth": "24",
+            "interfaceRef": "src",
+            "bitMap": "23:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "last": {
+            "order": "1",
+            "dataType": "ap_int",
+            "dataWidth": "1",
+            "interfaceRef": "src",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "dst": {
+      "index": "1",
+      "type": {
+        "kinds": [
+          "struct",
+          "pointer"
+        ],
+        "dataType": "axis_t",
+        "structImpl": "flat-field",
+        "dataPack": true,
+        "fields": {
+          "data": {
+            "order": "0",
+            "dataType": "ap_uint",
+            "dataWidth": "24",
+            "interfaceRef": "dst",
+            "bitMap": "23:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          },
+          "last": {
+            "order": "1",
+            "dataType": "ap_int",
+            "dataWidth": "1",
+            "interfaceRef": "dst",
+            "bitMap": "0:0",
+            "portRef": "TDATA",
+            "structImpl": "interface",
+            "dataPack": true
+          }
+        }
+      }
+    },
+    "src_rows": {
+      "index": "2",
+      "type": {
+        "dataType": "int",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_AXILiteS",
+        "registerRefs": ["src_rows"]
+      }
+    },
+    "src_cols": {
+      "index": "3",
+      "type": {
+        "dataType": "int",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_AXILiteS",
+        "registerRefs": ["src_cols"]
+      }
+    },
+    "threshold": {
+      "index": "4",
+      "type": {
+        "dataType": "int",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_AXILiteS",
+        "registerRefs": ["threshold"]
+      }
+    },
+    "unused": {
+      "index": "5",
+      "type": {
+        "dataType": "int",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_AXILiteS",
+        "registerRefs": ["unused"]
+      }
+    }
+  },
+  "Return": {
+    
+  },
+  "ClockInfo": {
+    "ClockName": "ap_clk",
+    "ClockPeriod": "10",
+    "IsCombLogic": "0",
+    "II": "x",
+    "Latency": "8361898",
+    "Uncertainty": "2.7"
+  },
+  "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
+  "Ipx": {
+    "Vendor": "xilinx.com",
+    "Library": "hls",
+    "Name": "fast_accel",
+    "Version": "1.0",
+    "DisplayName": "fast_accel2",
+    "Revision": "",
+    "Description": "Fast corner detection IP",
+    "Taxonomy": "\/VIVADO_HLS_IP",
+    "AutoFamilySupport": ""
+  },
+  "Files": {
+    "CSource": ["..\/..\/xf_fast_accel.cpp"],
+    "Vhdl": [
+      "impl\/vhdl\/axis2xfMat.vhd",
+      "impl\/vhdl\/Block_Mat_exit73_pro.vhd",
+      "impl\/vhdl\/fast.vhd",
+      "impl\/vhdl\/fast_accel_AXILiteS_s_axi.vhd",
+      "impl\/vhdl\/fast_accel_mux_32ncg.vhd",
+      "impl\/vhdl\/fast_accel_mux_32ocq.vhd",
+      "impl\/vhdl\/fast_accel_mux_73ibs.vhd",
+      "impl\/vhdl\/fast_accel_mux_73jbC.vhd",
+      "impl\/vhdl\/fifo_w1_d150_A.vhd",
+      "impl\/vhdl\/fifo_w8_d2_A.vhd",
+      "impl\/vhdl\/fifo_w8_d150_A.vhd",
+      "impl\/vhdl\/fifo_w12_d2_A.vhd",
+      "impl\/vhdl\/fifo_w12_d2_A_x.vhd",
+      "impl\/vhdl\/fifo_w12_d3_A.vhd",
+      "impl\/vhdl\/fifo_w32_d3_A.vhd",
+      "impl\/vhdl\/regslice_core.vhd",
+      "impl\/vhdl\/start_for_fast_U0.vhd",
+      "impl\/vhdl\/start_for_xFfastnpcA.vhd",
+      "impl\/vhdl\/start_for_xfMat2aqcK.vhd",
+      "impl\/vhdl\/xFfast7x75682.vhd",
+      "impl\/vhdl\/xFfast7x75682_bufbkb.vhd",
+      "impl\/vhdl\/xFFastCornerDetectio.vhd",
+      "impl\/vhdl\/xFfastnms5781.vhd",
+      "impl\/vhdl\/xfMat2axis.vhd",
+      "impl\/vhdl\/fast_accel.vhd"
+    ],
+    "Verilog": [
+      "impl\/verilog\/axis2xfMat.v",
+      "impl\/verilog\/Block_Mat_exit73_pro.v",
+      "impl\/verilog\/fast.v",
+      "impl\/verilog\/fast_accel_AXILiteS_s_axi.v",
+      "impl\/verilog\/fast_accel_mux_32ncg.v",
+      "impl\/verilog\/fast_accel_mux_32ocq.v",
+      "impl\/verilog\/fast_accel_mux_73ibs.v",
+      "impl\/verilog\/fast_accel_mux_73jbC.v",
+      "impl\/verilog\/fifo_w1_d150_A.v",
+      "impl\/verilog\/fifo_w8_d2_A.v",
+      "impl\/verilog\/fifo_w8_d150_A.v",
+      "impl\/verilog\/fifo_w12_d2_A.v",
+      "impl\/verilog\/fifo_w12_d2_A_x.v",
+      "impl\/verilog\/fifo_w12_d3_A.v",
+      "impl\/verilog\/fifo_w32_d3_A.v",
+      "impl\/verilog\/regslice_core.v",
+      "impl\/verilog\/start_for_fast_U0.v",
+      "impl\/verilog\/start_for_xFfastnpcA.v",
+      "impl\/verilog\/start_for_xfMat2aqcK.v",
+      "impl\/verilog\/xFfast7x75682.v",
+      "impl\/verilog\/xFfast7x75682_bufbkb.v",
+      "impl\/verilog\/xFFastCornerDetectio.v",
+      "impl\/verilog\/xFfastnms5781.v",
+      "impl\/verilog\/xfMat2axis.v",
+      "impl\/verilog\/fast_accel.v"
+    ],
+    "SwDriver": [
+      "impl\/misc\/drivers\/fast_accel_v1_0\/data\/fast_accel.mdd",
+      "impl\/misc\/drivers\/fast_accel_v1_0\/data\/fast_accel.tcl",
+      "impl\/misc\/drivers\/fast_accel_v1_0\/src\/Makefile",
+      "impl\/misc\/drivers\/fast_accel_v1_0\/src\/xfast_accel.c",
+      "impl\/misc\/drivers\/fast_accel_v1_0\/src\/xfast_accel.h",
+      "impl\/misc\/drivers\/fast_accel_v1_0\/src\/xfast_accel_hw.h",
+      "impl\/misc\/drivers\/fast_accel_v1_0\/src\/xfast_accel_linux.c",
+      "impl\/misc\/drivers\/fast_accel_v1_0\/src\/xfast_accel_sinit.c"
+    ],
+    "Misc": ["impl\/misc\/logo.png"],
+    "DesignXml": "\/mnt\/c\/fpgaXilinx\/fastPynq\/ip\/hls\/fast\/fast\/solution1\/.autopilot\/db\/fast_accel.design.xml",
+    "DebugDir": "\/mnt\/c\/fpgaXilinx\/fastPynq\/ip\/hls\/fast\/fast\/solution1\/.debug",
+    "ProtoInst": ["\/mnt\/c\/fpgaXilinx\/fastPynq\/ip\/hls\/fast\/fast\/solution1\/.debug\/fast_accel.protoinst"]
+  },
+  "SubcoreInfo": {
+    "HasXpmMemory": false,
+    "HasClockedDsp": false,
+    "IP": []
+  },
+  "Interfaces": {
+    "ap_clk": {
+      "type": "clock",
+      "ctype": {"CLK": {"Type": "bool"}},
+      "bundle_name": "ap_clk",
+      "bundle_role": "default",
+      "buses": "s_axi_AXILiteS src dst",
+      "reset": "ap_rst_n"
+    },
+    "ap_ctrl": {
+      "type": "ap_ctrl",
+      "ctrl_ports": "ap_start ap_done ap_ready ap_idle",
+      "ctype": {
+        "start": {"Type": "bool"},
+        "done": {"Type": "bool"},
+        "ready": {"Type": "bool"},
+        "idle": {"Type": "bool"}
+      }
+    },
+    "ap_rst_n": {
+      "type": "reset",
+      "polarity": "ACTIVE_LOW",
+      "ctype": {"RST": {"Type": "bool"}},
+      "bundle_name": "ap_rst_n",
+      "bundle_role": "default"
+    },
+    "dst": {
+      "type": "axi4stream",
+      "mode": "master",
+      "port_prefix": "dst",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer unsigned",
+          "Width": "24"
+        },
+        "TLAST": {
+          "Type": "integer signed",
+          "Width": "1"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"}
+      },
+      "port_width": {
+        "TDATA": "24",
+        "TLAST": "1"
+      }
+    },
+    "s_axi_AXILiteS": {
+      "type": "axi4lite",
+      "is_adaptor": "true",
+      "mode": "slave",
+      "port_prefix": "s_axi_AXILiteS",
+      "param_prefix": "C_S_AXI_AXILITES",
+      "addr_bits": "6",
+      "registers": [
+        {
+          "offset": "0x10",
+          "name": "src_rows",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of src_rows",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "src_rows",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of src_rows"
+            }]
+        },
+        {
+          "offset": "0x18",
+          "name": "src_cols",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of src_cols",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "src_cols",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of src_cols"
+            }]
+        },
+        {
+          "offset": "0x20",
+          "name": "threshold",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of threshold",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "threshold",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of threshold"
+            }]
+        },
+        {
+          "offset": "0x28",
+          "name": "unused",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of unused",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "unused",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of unused"
+            }]
+        }
+      ],
+      "ctype": {
+        "AWVALID": {"Type": "bool"},
+        "AWREADY": {"Type": "bool"},
+        "WVALID": {"Type": "bool"},
+        "WREADY": {"Type": "bool"},
+        "BVALID": {"Type": "bool"},
+        "BREADY": {"Type": "bool"},
+        "BRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "ARVALID": {"Type": "bool"},
+        "ARREADY": {"Type": "bool"},
+        "RVALID": {"Type": "bool"},
+        "RREADY": {"Type": "bool"},
+        "RRESP": {
+          "Type": "integer unsigned",
+          "Width": "2"
+        },
+        "AWADDR": {
+          "Type": "integer unsigned",
+          "Width": "6"
+        },
+        "WDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        },
+        "WSTRB": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "ARADDR": {
+          "Type": "integer unsigned",
+          "Width": "6"
+        },
+        "RDATA": {
+          "Type": "integer signed",
+          "Width": "32"
+        }
+      },
+      "data_width": "32",
+      "port_width": {
+        "ARADDR": "6",
+        "AWADDR": "6",
+        "RDATA": "32",
+        "WDATA": "32",
+        "WSTRB": "4"
+      }
+    },
+    "src": {
+      "type": "axi4stream",
+      "mode": "slave",
+      "port_prefix": "src",
+      "has_tready": "1",
+      "ctype": {
+        "TDATA": {
+          "Type": "integer unsigned",
+          "Width": "24"
+        },
+        "TVALID": {"Type": "bool"},
+        "TREADY": {"Type": "bool"},
+        "TLAST": {
+          "Type": "integer signed",
+          "Width": "1"
+        }
+      },
+      "port_width": {
+        "TDATA": "24",
+        "TLAST": "1"
+      }
+    }
+  },
+  "RtlPorts": {
+    "s_axi_AXILiteS_AWVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_AWREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_AWADDR": {
+      "dir": "in",
+      "width": "6"
+    },
+    "s_axi_AXILiteS_WVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_WREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_WDATA": {
+      "dir": "in",
+      "width": "32"
+    },
+    "s_axi_AXILiteS_WSTRB": {
+      "dir": "in",
+      "width": "4"
+    },
+    "s_axi_AXILiteS_ARVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_ARREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_ARADDR": {
+      "dir": "in",
+      "width": "6"
+    },
+    "s_axi_AXILiteS_RVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_RREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_RDATA": {
+      "dir": "out",
+      "width": "32"
+    },
+    "s_axi_AXILiteS_RRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "s_axi_AXILiteS_BVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_BREADY": {
+      "dir": "in",
+      "width": "1"
+    },
+    "s_axi_AXILiteS_BRESP": {
+      "dir": "out",
+      "width": "2"
+    },
+    "ap_clk": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_rst_n": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_start": {
+      "dir": "in",
+      "width": "1"
+    },
+    "ap_done": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_ready": {
+      "dir": "out",
+      "width": "1"
+    },
+    "ap_idle": {
+      "dir": "out",
+      "width": "1"
+    },
+    "src_TDATA": {
+      "dir": "in",
+      "width": "24"
+    },
+    "src_TVALID": {
+      "dir": "in",
+      "width": "1"
+    },
+    "src_TREADY": {
+      "dir": "out",
+      "width": "1"
+    },
+    "src_TLAST": {
+      "dir": "in",
+      "width": "1",
+      "isVector": "true"
+    },
+    "dst_TDATA": {
+      "dir": "out",
+      "width": "24"
+    },
+    "dst_TLAST": {
+      "dir": "out",
+      "width": "1",
+      "isVector": "true"
+    },
+    "dst_TVALID": {
+      "dir": "out",
+      "width": "1"
+    },
+    "dst_TREADY": {
+      "dir": "in",
+      "width": "1"
+    }
+  },
+  "ModuleInfo": {
+    "Hierarchy": {
+      "ModuleName": "fast_accel",
+      "Instances": [
+        {
+          "ModuleName": "fast",
+          "InstanceName": "fast_U0",
+          "Instances": [{
+              "ModuleName": "xFFastCornerDetectio",
+              "InstanceName": "grp_xFFastCornerDetectio_fu_46",
+              "Instances": [
+                {
+                  "ModuleName": "xFfast7x75682",
+                  "InstanceName": "xFfast7x75682_U0"
+                },
+                {
+                  "ModuleName": "xFfastnms5781",
+                  "InstanceName": "xFfastnms5781_U0"
+                }
+              ]
+            }]
+        },
+        {
+          "ModuleName": "xfMat2axis",
+          "InstanceName": "xfMat2axis_U0"
+        },
+        {
+          "ModuleName": "axis2xfMat",
+          "InstanceName": "axis2xfMat_U0"
+        },
+        {
+          "ModuleName": "Block_Mat_exit73_pro",
+          "InstanceName": "Block_Mat_exit73_pro_U0"
+        }
+      ]
+    },
+    "Info": {
+      "Block_Mat_exit73_pro": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "1"
+      },
+      "axis2xfMat": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "xFfast7x75682": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "xFfastnms5781": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "xFFastCornerDetectio": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "fast": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "xfMat2axis": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "0",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      },
+      "fast_accel": {
+        "FunctionProtocol": "ap_ctrl_hs",
+        "isTaskLevelControl": "1",
+        "isPipelined": "1",
+        "isCombinational": "0",
+        "isOneStateSeq": "0"
+      }
+    },
+    "Metrics": {
+      "Block_Mat_exit73_pro": {
+        "Latency": {
+          "LatencyBest": "0",
+          "LatencyAvg": "0",
+          "LatencyWorst": "0",
+          "PipelineII": "0",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "3.401"
+        },
+        "Area": {
+          "FF": "3",
+          "LUT": "22",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "axis2xfMat": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "",
+          "LatencyWorst": "16781311",
+          "PipelineIIMin": "1",
+          "PipelineIIMax": "16781311",
+          "PipelineII": "1 ~ 16781311",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "6.802"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "",
+            "LatencyMin": "0",
+            "LatencyMax": "16781310",
+            "Latency": "0 ~ 16781310",
+            "PipelineII": "",
+            "PipelineDepthMin": "3",
+            "PipelineDepthMax": "4098",
+            "PipelineDepth": "3 ~ 4098",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "",
+                "LatencyMin": "0",
+                "LatencyMax": "4095",
+                "Latency": "0 ~ 4095",
+                "PipelineII": "1",
+                "PipelineDepth": "2"
+              }]
+          }],
+        "Area": {
+          "FF": "77",
+          "LUT": "79",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "xFfast7x75682": {
+        "Latency": {
+          "LatencyBest": "8361896",
+          "LatencyAvg": "8361896",
+          "LatencyWorst": "8361896",
+          "PipelineII": "8361896",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.117"
+        },
+        "Loops": [
+          {
+            "Name": "Loop 1",
+            "TripCount": "7",
+            "Latency": "7",
+            "PipelineII": "",
+            "PipelineDepth": "1"
+          },
+          {
+            "Name": "read_lines",
+            "TripCount": "7",
+            "Latency": "26922",
+            "PipelineII": "",
+            "PipelineDepth": "3846",
+            "Loops": [{
+                "Name": "read_lines.1",
+                "TripCount": "3843",
+                "Latency": "3843",
+                "PipelineII": "1",
+                "PipelineDepth": "2"
+              }]
+          },
+          {
+            "Name": "Loop 3",
+            "TripCount": "3843",
+            "Latency": "3843",
+            "PipelineII": "",
+            "PipelineDepth": "1"
+          },
+          {
+            "Name": "Row_Loop",
+            "TripCount": "2160",
+            "Latency": "8331120",
+            "PipelineII": "",
+            "PipelineDepth": "3857",
+            "Loops": [{
+                "Name": "Col_Loop",
+                "TripCount": "3843",
+                "Latency": "3854",
+                "PipelineII": "1",
+                "PipelineDepth": "13"
+              }]
+          }
+        ],
+        "Area": {
+          "BRAM_18K": "14",
+          "FF": "5143",
+          "LUT": "5282",
+          "URAM": "0",
+          "DSP48E": "0"
+        }
+      },
+      "xFfastnms5781": {
+        "Latency": {
+          "LatencyBest": "8328741",
+          "LatencyAvg": "8328741",
+          "LatencyWorst": "8328741",
+          "PipelineII": "8328741",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "6.901"
+        },
+        "Loops": [
+          {
+            "Name": "Loop 1",
+            "TripCount": "3",
+            "Latency": "3",
+            "PipelineII": "",
+            "PipelineDepth": "1"
+          },
+          {
+            "Name": "read_lines",
+            "TripCount": "3",
+            "Latency": "11532",
+            "PipelineII": "",
+            "PipelineDepth": "3844",
+            "Loops": [{
+                "Name": "read_lines.1",
+                "TripCount": "3841",
+                "Latency": "3841",
+                "PipelineII": "1",
+                "PipelineDepth": "2"
+              }]
+          },
+          {
+            "Name": "Loop 3",
+            "TripCount": "3841",
+            "Latency": "7682",
+            "PipelineII": "",
+            "PipelineDepth": "2"
+          },
+          {
+            "Name": "Row_Loop",
+            "TripCount": "2160",
+            "Latency": "8309520",
+            "PipelineII": "",
+            "PipelineDepth": "3847",
+            "Loops": [{
+                "Name": "Col_Loop",
+                "TripCount": "3841",
+                "Latency": "3844",
+                "PipelineII": "1",
+                "PipelineDepth": "5"
+              }]
+          }
+        ],
+        "Area": {
+          "BRAM_18K": "6",
+          "FF": "698",
+          "LUT": "758",
+          "URAM": "0",
+          "DSP48E": "0"
+        }
+      },
+      "xFFastCornerDetectio": {
+        "Latency": {
+          "LatencyBest": "8361896",
+          "LatencyAvg": "8361896",
+          "LatencyWorst": "8361896",
+          "PipelineII": "8361897",
+          "PipelineDepth": "",
+          "PipelineType": "dataflow"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.117"
+        },
+        "Area": {
+          "BRAM_18K": "20",
+          "FF": "5856",
+          "LUT": "6109",
+          "URAM": "0",
+          "DSP48E": "0"
+        }
+      },
+      "fast": {
+        "Latency": {
+          "LatencyBest": "8361897",
+          "LatencyAvg": "8361897",
+          "LatencyWorst": "8361897",
+          "PipelineII": "8361897",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.117"
+        },
+        "Area": {
+          "BRAM_18K": "20",
+          "FF": "5902",
+          "LUT": "6133",
+          "URAM": "0",
+          "DSP48E": "0"
+        }
+      },
+      "xfMat2axis": {
+        "Latency": {
+          "LatencyBest": "1",
+          "LatencyAvg": "",
+          "LatencyWorst": "16785406",
+          "PipelineIIMin": "1",
+          "PipelineIIMax": "16785406",
+          "PipelineII": "1 ~ 16785406",
+          "PipelineDepth": "",
+          "PipelineType": "none"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "4.947"
+        },
+        "Loops": [{
+            "Name": "Loop 1",
+            "TripCount": "",
+            "LatencyMin": "0",
+            "LatencyMax": "16785405",
+            "Latency": "0 ~ 16785405",
+            "PipelineII": "",
+            "PipelineDepthMin": "3",
+            "PipelineDepthMax": "4099",
+            "PipelineDepth": "3 ~ 4099",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "",
+                "LatencyMin": "0",
+                "LatencyMax": "4096",
+                "Latency": "0 ~ 4096",
+                "PipelineII": "1",
+                "PipelineDepth": "3"
+              }]
+          }],
+        "Area": {
+          "FF": "98",
+          "LUT": "122",
+          "BRAM_18K": "0",
+          "DSP48E": "0",
+          "URAM": "0"
+        }
+      },
+      "fast_accel": {
+        "Latency": {
+          "LatencyBest": "8361898",
+          "LatencyAvg": "",
+          "LatencyWorst": "16785416",
+          "PipelineIIMin": "8361898",
+          "PipelineIIMax": "16785407",
+          "PipelineII": "8361898 ~ 16785407",
+          "PipelineDepth": "",
+          "PipelineType": "dataflow"
+        },
+        "Timing": {
+          "Target": "10.00",
+          "Uncertainty": "2.70",
+          "Estimate": "7.117"
+        },
+        "Area": {
+          "BRAM_18K": "21",
+          "FF": "6346",
+          "LUT": "6999",
+          "URAM": "0",
+          "DSP48E": "0"
+        }
+      }
+    }
+  },
+  "Sdx": {
+    "Target": "none",
+    "ProfileOption": "0",
+    "ProfileType": "none",
+    "XO": "",
+    "KernelName": "fast_accel",
+    "EnableXoSwEmu": "1"
+  },
+  "GenData": {
+    "DataVersion": "0.2",
+    "Time": "2020-04-23 12:11:25 DST",
+    "ToolName": "vivado_hls",
+    "ToolVersion": "2019.2"
+  }
+}

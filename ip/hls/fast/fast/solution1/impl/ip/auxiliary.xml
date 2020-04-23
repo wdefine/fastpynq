@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="fast_accel" xd:componentRef="fast_accel" xd:initiationInterval="16785417" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="ap_ctrl" xd:busTypeRef="acc_handshake" xd:type="acc_handshake"/>
+  <xd:arg xd:name="src-&gt;data" xd:originalName="src" xd:direction="in" xd:interfaceRef="src" xd:busTypeRef="axis" xd:dataWidth="24"/>
+  <xd:arg xd:name="src-&gt;last" xd:originalName="src" xd:direction="in" xd:interfaceRef="src" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="dst-&gt;data" xd:originalName="dst" xd:direction="out" xd:interfaceRef="dst" xd:busTypeRef="axis" xd:dataWidth="24"/>
+  <xd:arg xd:name="dst-&gt;last" xd:originalName="dst" xd:direction="out" xd:interfaceRef="dst" xd:busTypeRef="axis" xd:dataWidth="1"/>
+  <xd:arg xd:name="src_rows" xd:originalName="src_rows" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="src_cols" xd:originalName="src_cols" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="threshold" xd:originalName="threshold" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="unused" xd:originalName="unused" xd:direction="in" xd:interfaceRef="s_axi_AXILiteS" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="8361898" xd:worst-case="16785416" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="6999" xd:FF="6346" xd:BRAM="21" xd:DSP="0"/>
+</xd:acceleratorMap>

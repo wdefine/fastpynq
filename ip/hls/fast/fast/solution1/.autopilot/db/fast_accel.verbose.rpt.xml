@@ -1,0 +1,165 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'fast_accel'" level="0">
+<item name = "Date">Thu Apr 23 12:11:05 2020
+</item>
+<item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
+<item name = "Project">fast</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg484-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.117 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">8361898, 16785416, 83.619 ms, 0.168 sec, 8361898, 16785407, dataflow</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="fast_U0">fast, 8361897, 8361897, 83.619 ms, 83.619 ms, 8361897, 8361897, none</column>
+<column name="xfMat2axis_U0">xfMat2axis, 1, 16785406, 10.000 ns, 0.168 sec, 1, 16785406, none</column>
+<column name="axis2xfMat_U0">axis2xfMat, 1, 16781311, 10.000 ns, 0.168 sec, 1, 16781311, none</column>
+<column name="Block_Mat_exit73_pro_U0">Block_Mat_exit73_pro, 0, 0, 0 ns, 0 ns, 0, 0, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 12, -</column>
+<column name="FIFO">1, -, 78, 323, -</column>
+<column name="Instance">20, -, 6262, 6652, 0</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 12, -</column>
+<column name="Register">-, -, 6, -, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
+<specialColumn name="Utilization (%)">7, 0, 5, 13, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="Block_Mat_exit73_pro_U0">Block_Mat_exit73_pro, 0, 0, 3, 22, 0</column>
+<column name="axis2xfMat_U0">axis2xfMat, 0, 0, 77, 79, 0</column>
+<column name="fast_U0">fast, 20, 0, 5902, 6133, 0</column>
+<column name="fast_accel_AXILiteS_s_axi_U">fast_accel_AXILiteS_s_axi, 0, 0, 182, 296, 0</column>
+<column name="xfMat2axis_U0">xfMat2axis, 0, 0, 98, 122, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+<column name="dst_mat_data_V_U">0, 10, 0, -, 150, 1, 150</column>
+<column name="src_cols_cast2_loc_c_1_U">0, 5, 0, -, 3, 12, 36</column>
+<column name="src_cols_cast2_loc_c_U">0, 5, 0, -, 2, 12, 24</column>
+<column name="src_mat_cols_c_U">0, 5, 0, -, 3, 32, 96</column>
+<column name="src_mat_data_V_U">1, 33, 0, -, 150, 8, 1200</column>
+<column name="src_mat_rows_c_U">0, 5, 0, -, 3, 32, 96</column>
+<column name="src_rows_cast1_loc_c_1_U">0, 5, 0, -, 3, 12, 36</column>
+<column name="src_rows_cast1_loc_c_U">0, 5, 0, -, 2, 12, 24</column>
+<column name="threshold_c_U">0, 5, 0, -, 3, 32, 96</column>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="Block_Mat_exit73_pro_U0_ap_ready_count">+, 0, 0, 3, 2, 1</column>
+<column name="axis2xfMat_U0_ap_ready_count">+, 0, 0, 3, 2, 1</column>
+<column name="Block_Mat_exit73_pro_U0_ap_start">and, 0, 0, 1, 1, 1</column>
+<column name="ap_idle">and, 0, 0, 1, 1, 1</column>
+<column name="ap_sync_ready">and, 0, 0, 1, 1, 1</column>
+<column name="axis2xfMat_U0_ap_start">and, 0, 0, 1, 1, 1</column>
+<column name="ap_sync_Block_Mat_exit73_pro_U0_ap_ready">or, 0, 0, 1, 1, 1</column>
+<column name="ap_sync_axis2xfMat_U0_ap_ready">or, 0, 0, 1, 1, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="Block_Mat_exit73_pro_U0_ap_ready_count">3, 2, 2, 4</column>
+<column name="ap_sync_reg_Block_Mat_exit73_pro_U0_ap_ready">3, 2, 1, 2</column>
+<column name="ap_sync_reg_axis2xfMat_U0_ap_ready">3, 2, 1, 2</column>
+<column name="axis2xfMat_U0_ap_ready_count">3, 2, 2, 4</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="Block_Mat_exit73_pro_U0_ap_ready_count">2, 0, 2, 0</column>
+<column name="ap_sync_reg_Block_Mat_exit73_pro_U0_ap_ready">1, 0, 1, 0</column>
+<column name="ap_sync_reg_axis2xfMat_U0_ap_ready">1, 0, 1, 0</column>
+<column name="axis2xfMat_U0_ap_ready_count">2, 0, 2, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="s_axi_AXILiteS_AWVALID">in, 1, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_AWREADY">out, 1, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_AWADDR">in, 6, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_WVALID">in, 1, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_WREADY">out, 1, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_WDATA">in, 32, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_WSTRB">in, 4, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_ARVALID">in, 1, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_ARREADY">out, 1, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_ARADDR">in, 6, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_RVALID">out, 1, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_RREADY">in, 1, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_RDATA">out, 32, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_RRESP">out, 2, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_BVALID">out, 1, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_BREADY">in, 1, s_axi, AXILiteS, scalar</column>
+<column name="s_axi_AXILiteS_BRESP">out, 2, s_axi, AXILiteS, scalar</column>
+<column name="ap_clk">in, 1, ap_ctrl_hs, fast_accel, return value</column>
+<column name="ap_rst_n">in, 1, ap_ctrl_hs, fast_accel, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, fast_accel, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, fast_accel, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, fast_accel, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, fast_accel, return value</column>
+<column name="src_TDATA">in, 24, axis, src_data_V, pointer</column>
+<column name="src_TVALID">in, 1, axis, src_data_V, pointer</column>
+<column name="src_TREADY">out, 1, axis, src_data_V, pointer</column>
+<column name="src_TLAST">in, 1, axis, src_last_V, pointer</column>
+<column name="dst_TDATA">out, 24, axis, dst_data_V, pointer</column>
+<column name="dst_TLAST">out, 1, axis, dst_last_V, pointer</column>
+<column name="dst_TVALID">out, 1, axis, dst_last_V, pointer</column>
+<column name="dst_TREADY">in, 1, axis, dst_last_V, pointer</column>
+</table>
+</item>
+</section>
+</profile>

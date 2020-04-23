@@ -1,0 +1,192 @@
+
+
+================================================================
+== Vivado HLS Report for 'fast_accel'
+================================================================
+* Date:           Thu Apr 23 12:11:05 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        fast
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 7.117 ns |   2.70 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+----------+-----------+-----------+---------+----------+----------+
+    |  Latency (cycles)  |   Latency (absolute)  |      Interval      | Pipeline |
+    |   min   |    max   |    min    |    max    |   min   |    max   |   Type   |
+    +---------+----------+-----------+-----------+---------+----------+----------+
+    |  8361898|  16785416| 83.619 ms | 0.168 sec |  8361898|  16785407| dataflow |
+    +---------+----------+-----------+-----------+---------+----------+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+---------+----------+-----------+-----------+---------+----------+---------+
+        |                         |                      |  Latency (cycles)  |   Latency (absolute)  |      Interval      | Pipeline|
+        |         Instance        |        Module        |   min   |    max   |    min    |    max    |   min   |    max   |   Type  |
+        +-------------------------+----------------------+---------+----------+-----------+-----------+---------+----------+---------+
+        |fast_U0                  |fast                  |  8361897|   8361897| 83.619 ms | 83.619 ms |  8361897|   8361897|   none  |
+        |xfMat2axis_U0            |xfMat2axis            |        1|  16785406| 10.000 ns | 0.168 sec |        1|  16785406|   none  |
+        |axis2xfMat_U0            |axis2xfMat            |        1|  16781311| 10.000 ns | 0.168 sec |        1|  16781311|   none  |
+        |Block_Mat_exit73_pro_U0  |Block_Mat_exit73_pro  |        0|         0|    0 ns   |    0 ns   |        0|         0|   none  |
+        +-------------------------+----------------------+---------+----------+-----------+-----------+---------+----------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|     12|    -|
+|FIFO             |        1|      -|      78|    323|    -|
+|Instance         |       20|      -|    6262|   6652|    0|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     12|    -|
+|Register         |        -|      -|       6|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |       21|      0|    6346|   6999|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        7|      0|       5|     13|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------+---------------------------+---------+-------+------+------+-----+
+    |           Instance          |           Module          | BRAM_18K| DSP48E|  FF  |  LUT | URAM|
+    +-----------------------------+---------------------------+---------+-------+------+------+-----+
+    |Block_Mat_exit73_pro_U0      |Block_Mat_exit73_pro       |        0|      0|     3|    22|    0|
+    |axis2xfMat_U0                |axis2xfMat                 |        0|      0|    77|    79|    0|
+    |fast_U0                      |fast                       |       20|      0|  5902|  6133|    0|
+    |fast_accel_AXILiteS_s_axi_U  |fast_accel_AXILiteS_s_axi  |        0|      0|   182|   296|    0|
+    |xfMat2axis_U0                |xfMat2axis                 |        0|      0|    98|   122|    0|
+    +-----------------------------+---------------------------+---------+-------+------+------+-----+
+    |Total                        |                           |       20|      0|  6262|  6652|    0|
+    +-----------------------------+---------------------------+---------+-------+------+------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    +--------------------------+---------+----+----+-----+------+-----+---------+
+    |           Name           | BRAM_18K| FF | LUT| URAM| Depth| Bits| Size:D*B|
+    +--------------------------+---------+----+----+-----+------+-----+---------+
+    |dst_mat_data_V_U          |        0|  10|   0|    -|   150|    1|      150|
+    |src_cols_cast2_loc_c_1_U  |        0|   5|   0|    -|     3|   12|       36|
+    |src_cols_cast2_loc_c_U    |        0|   5|   0|    -|     2|   12|       24|
+    |src_mat_cols_c_U          |        0|   5|   0|    -|     3|   32|       96|
+    |src_mat_data_V_U          |        1|  33|   0|    -|   150|    8|     1200|
+    |src_mat_rows_c_U          |        0|   5|   0|    -|     3|   32|       96|
+    |src_rows_cast1_loc_c_1_U  |        0|   5|   0|    -|     3|   12|       36|
+    |src_rows_cast1_loc_c_U    |        0|   5|   0|    -|     2|   12|       24|
+    |threshold_c_U             |        0|   5|   0|    -|     3|   32|       96|
+    +--------------------------+---------+----+----+-----+------+-----+---------+
+    |Total                     |        1|  78|   0|    0|   319|  153|     1758|
+    +--------------------------+---------+----+----+-----+------+-----+---------+
+
+    * Expression: 
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |               Variable Name              | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |Block_Mat_exit73_pro_U0_ap_ready_count    |     +    |      0|  0|   3|           2|           1|
+    |axis2xfMat_U0_ap_ready_count              |     +    |      0|  0|   3|           2|           1|
+    |Block_Mat_exit73_pro_U0_ap_start          |    and   |      0|  0|   1|           1|           1|
+    |ap_idle                                   |    and   |      0|  0|   1|           1|           1|
+    |ap_sync_ready                             |    and   |      0|  0|   1|           1|           1|
+    |axis2xfMat_U0_ap_start                    |    and   |      0|  0|   1|           1|           1|
+    |ap_sync_Block_Mat_exit73_pro_U0_ap_ready  |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_axis2xfMat_U0_ap_ready            |    or    |      0|  0|   1|           1|           1|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                     |          |      0|  0|  12|          10|           8|
+    +------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |                     Name                     | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |Block_Mat_exit73_pro_U0_ap_ready_count        |   3|          2|    2|          4|
+    |ap_sync_reg_Block_Mat_exit73_pro_U0_ap_ready  |   3|          2|    1|          2|
+    |ap_sync_reg_axis2xfMat_U0_ap_ready            |   3|          2|    1|          2|
+    |axis2xfMat_U0_ap_ready_count                  |   3|          2|    2|          4|
+    +----------------------------------------------+----+-----------+-----+-----------+
+    |Total                                         |  12|          8|    6|         12|
+    +----------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------+---+----+-----+-----------+
+    |                     Name                     | FF| LUT| Bits| Const Bits|
+    +----------------------------------------------+---+----+-----+-----------+
+    |Block_Mat_exit73_pro_U0_ap_ready_count        |  2|   0|    2|          0|
+    |ap_sync_reg_Block_Mat_exit73_pro_U0_ap_ready  |  1|   0|    1|          0|
+    |ap_sync_reg_axis2xfMat_U0_ap_ready            |  1|   0|    1|          0|
+    |axis2xfMat_U0_ap_ready_count                  |  2|   0|    2|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+    |Total                                         |  6|   0|    6|          0|
+    +----------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------+-----+-----+------------+--------------+--------------+
+|        RTL Ports       | Dir | Bits|  Protocol  | Source Object|    C Type    |
++------------------------+-----+-----+------------+--------------+--------------+
+|s_axi_AXILiteS_AWVALID  |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_AWREADY  | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_AWADDR   |  in |    6|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WVALID   |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WREADY   | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WDATA    |  in |   32|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_WSTRB    |  in |    4|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_ARVALID  |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_ARREADY  | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_ARADDR   |  in |    6|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RVALID   | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RREADY   |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RDATA    | out |   32|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_RRESP    | out |    2|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_BVALID   | out |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_BREADY   |  in |    1|    s_axi   |   AXILiteS   |    scalar    |
+|s_axi_AXILiteS_BRESP    | out |    2|    s_axi   |   AXILiteS   |    scalar    |
+|ap_clk                  |  in |    1| ap_ctrl_hs |  fast_accel  | return value |
+|ap_rst_n                |  in |    1| ap_ctrl_hs |  fast_accel  | return value |
+|ap_start                |  in |    1| ap_ctrl_hs |  fast_accel  | return value |
+|ap_done                 | out |    1| ap_ctrl_hs |  fast_accel  | return value |
+|ap_ready                | out |    1| ap_ctrl_hs |  fast_accel  | return value |
+|ap_idle                 | out |    1| ap_ctrl_hs |  fast_accel  | return value |
+|src_TDATA               |  in |   24|    axis    |  src_data_V  |    pointer   |
+|src_TVALID              |  in |    1|    axis    |  src_data_V  |    pointer   |
+|src_TREADY              | out |    1|    axis    |  src_data_V  |    pointer   |
+|src_TLAST               |  in |    1|    axis    |  src_last_V  |    pointer   |
+|dst_TDATA               | out |   24|    axis    |  dst_data_V  |    pointer   |
+|dst_TLAST               | out |    1|    axis    |  dst_last_V  |    pointer   |
+|dst_TVALID              | out |    1|    axis    |  dst_last_V  |    pointer   |
+|dst_TREADY              |  in |    1|    axis    |  dst_last_V  |    pointer   |
++------------------------+-----+-----+------------+--------------+--------------+
+

@@ -1,0 +1,1786 @@
+INFO-FLOW: Workspace /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1 opened at Thu Apr 23 12:01:22 DST 2020
+Execute     set_part zynq -tool vivado 
+Execute       ap_part_info -name zynq -data single -quiet 
+Command       ap_part_info done; 8.27 sec.
+Execute       ap_family_info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Command             ap_source done; 0.12 sec.
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Command           ap_source done; 0.25 sec.
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Command           ap_source done; 0.18 sec.
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Command         import_lib done; 0.54 sec.
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.35 sec.
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.9 sec.
+Command         ap_source done; 0.93 sec.
+Execute         ap_part_info -data single -name xc7z020-clg484-2 
+Execute         ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -speed medium 
+Command       add_library done; 1.66 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Command       add_library done; 0.24 sec.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       get_default_platform 
+Command     set_part done; 10.55 sec.
+Execute     create_clock -period 10 -name default 
+Execute       config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     set_clock_uncertainty 27.0% 
+Execute       get_clock_period -default -name=default 
+Execute       config_clock -quiet -name default -uncertainty 2.7 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute         get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute         get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'xf_fast_accel.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         is_m_axi_addr64 
+INFO-FLOW: Handling xf_fast_accel.cpp as C++
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         is_encrypted xf_fast_accel.cpp 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute         clang  -fno-limit-debug-info -gcc-toolchain "/mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "xf_fast_accel.cpp"   -I../vitis_lib/vision/L1/include -D__SDSVHLS__ -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot" -I "/mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp" 
+INFO-FLOW: exec /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E xf_fast_accel.cpp -I../vitis_lib/vision/L1/include -D__SDSVHLS__ -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot -I /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp
+Command         clang done; 5.91 sec.
+Execute         tidy_31 xilinx-xfmat-array-geometry /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp std=c++0x 
+INFO-FLOW: exec /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command         tidy_31 done; 4.11 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute         clang -syntaxcheck -src /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/gcc" -hls  -I../vitis_lib/vision/L1/include -D__SDSVHLS__ -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot" -I "/mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp"  -o "/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/gcc -hls -I../vitis_lib/vision/L1/include -D__SDSVHLS__ -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot -I /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/useless.bc
+WARNING: [HLS 200-40] In file included from xf_fast_accel.cpp:1:
+In file included from xf_fast_accel.cpp:1:
+In file included from ./xf_fast_config.h:22:
+In file included from ../vitis_lib/vision/L1/include/common/xf_common.hpp:20:
+../vitis_lib/vision/L1/include/common/xf_structs.hpp:440:33: warning: unknown attribute 'xcl_array_geometry' ignored [-Wattributes]
+    DATATYPE* data __attribute((xcl_array_geometry(
+                                ^
+1 warning generated.
+Command         clang done; 6.55 sec.
+INFO-FLOW: Done: GCC PP time: 16.6 seconds per iteration
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute         list_core -type functional_unit 
+Execute         tidy_31 xilinx-systemc-detector /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp std=c++0x -directive=/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command         tidy_31 done; 3.55 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute         tidy_31 xilinx-directive2pragma /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp std=c++0x -directive=/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command         tidy_31 done; 2.53 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xilinx-dataflow-lawyer.xf_fast_accel.pp.0.cpp.diag.yml /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 -fstrict-dataflow > /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xilinx-dataflow-lawyer.xf_fast_accel.pp.0.cpp.out.log 2> /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xilinx-dataflow-lawyer.xf_fast_accel.pp.0.cpp.err.log 
+Command         ap_eval done; 3.33 sec.
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../vitis_lib/vision/L1/include/common/xf_utility.hpp:301:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../vitis_lib/vision/L1/include/common/xf_utility.hpp:338:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../vitis_lib/vision/L1/include/common/xf_utility.hpp:442:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../vitis_lib/vision/L1/include/common/xf_utility.hpp:482:2
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: ../vitis_lib/vision/L1/include/features/xf_fast.hpp:923:23
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: ../vitis_lib/vision/L1/include/features/xf_fast.hpp:925:13
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: ../vitis_lib/vision/L1/include/features/xf_fast.hpp:920:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: ../vitis_lib/vision/L1/include/features/xf_fast.hpp:928:9
+Execute         send_msg_by_id WARNING @200-471@%s%s 8 xf_fast_accel.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file xf_fast_accel.cpp
+Execute         tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp std=c++0x 
+Execute           ap_eval exec -ignorestderr /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/tidy-3.1.xf_fast_accel.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 > /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/tidy-3.1.xf_fast_accel.pp.0.cpp.out.log 2> /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/tidy-3.1.xf_fast_accel.pp.0.cpp.err.log 
+Command           ap_eval done; 5.41 sec.
+ERROR: [HLS 214-124] use of undeclared identifier 'dst_cols': xf_fast_accel.cpp:47
+Command         tidy_31 done; error code: 2; 5.58 sec.
+Command       elaborate done; error code: 2; 32.08 sec.
+Command     csynth_design done; error code: 2; 32.11 sec.
+Command   ap_source done; error code: 1; 42.88 sec.
+Execute   cleanup_all 
+INFO-FLOW: Workspace /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1 opened at Thu Apr 23 12:09:08 DST 2020
+Execute       config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute       config_clock -quiet -name default -uncertainty 2.7 -unit % 
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.2 sec.
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.33 sec.
+Command       ap_source done; 0.33 sec.
+Execute       open_platform DefaultPlatform 
+Execute       import_lib /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       set_part xc7z020-clg484-2 
+Execute         ap_part_info -name xc7z020-clg484-2 -data single -quiet 
+Command         ap_part_info done; 5.38 sec.
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Command               ap_source done; 0.16 sec.
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command             ap_source done; 0.28 sec.
+Command           ap_source done; 0.28 sec.
+Execute           ap_part_info -data single -name xc7z020-clg484-2 
+Execute           ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info 
+Execute           config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info 
+Execute           config_chip_info -quiet -speed medium 
+Command         add_library done; 0.46 sec.
+Execute         add_library xilinx/zynq/zynq_fpv6 
+Execute           get_default_platform 
+Execute           open_platform DefaultPlatform 
+Execute           import_lib /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                   source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                   source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         get_default_platform 
+Command       set_part done; 6.11 sec.
+Execute       ap_part_info -data single -name xc7z020-clg484-2 
+Execute       ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       config_chip_info -quiet -speed medium 
+Command     open_solution done; 6.65 sec.
+Execute     set_part zynq -tool vivado 
+Execute       ap_part_info -name zynq -data single -quiet 
+Execute       ap_family_info 
+Execute       add_library xilinx/zynq/zynq:xc7z020:-clg484:-2 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.18 sec.
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.3 sec.
+Command         ap_source done; 0.31 sec.
+Execute         ap_part_info -data single -name xc7z020-clg484-2 
+Execute         ap_part_info -name xc7z020-clg484-2 -data resources 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         config_chip_info -quiet -speed medium 
+Command       add_library done; 0.46 sec.
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+Execute         open_platform DefaultPlatform 
+Execute         import_lib /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
+Execute                 source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info 
+Execute       get_default_platform 
+Command     set_part done; 0.82 sec.
+Execute     create_clock -period 10 -name default 
+Execute     set_clock_uncertainty 27.0% 
+Execute     csynth_design 
+Execute       get_config_compile -dump_cfg 
+Execute       get_config_compile -effort 
+Execute       get_config_compile -enable_clang39 
+Execute       get_config_compile -g 
+Execute       get_config_compile -ng 
+Execute       get_config_compile -opt_fp 
+Execute       get_config_compile -skip_cdt 
+Execute       get_config_compile -skip_syncheck 
+Execute       get_config_compile -skip_transform 
+Execute       get_config_compile -keep_printf 
+Execute       elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute         get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute         get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'xf_fast_accel.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute         is_m_axi_addr64 
+INFO-FLOW: Handling xf_fast_accel.cpp as C++
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+Execute         is_encrypted xf_fast_accel.cpp 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute         clang  -fno-limit-debug-info -gcc-toolchain "/mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "xf_fast_accel.cpp"   -I../vitis_lib/vision/L1/include -D__SDSVHLS__ -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot" -I "/mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp" 
+INFO-FLOW: exec /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E xf_fast_accel.cpp -I../vitis_lib/vision/L1/include -D__SDSVHLS__ -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot -I /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp
+Command         clang done; 5.08 sec.
+Execute         tidy_31 xilinx-xfmat-array-geometry /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp std=c++0x 
+INFO-FLOW: exec /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command         tidy_31 done; 2.87 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute         clang -syntaxcheck -src /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/gcc" -hls  -I../vitis_lib/vision/L1/include -D__SDSVHLS__ -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot" -I "/mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp"  -o "/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/gcc -hls -I../vitis_lib/vision/L1/include -D__SDSVHLS__ -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot -I /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/useless.bc
+WARNING: [HLS 200-40] In file included from xf_fast_accel.cpp:1:
+In file included from xf_fast_accel.cpp:1:
+In file included from ./xf_fast_config.h:22:
+In file included from ../vitis_lib/vision/L1/include/common/xf_common.hpp:20:
+../vitis_lib/vision/L1/include/common/xf_structs.hpp:440:33: warning: unknown attribute 'xcl_array_geometry' ignored [-Wattributes]
+    DATATYPE* data __attribute((xcl_array_geometry(
+                                ^
+1 warning generated.
+Command         clang done; 7.18 sec.
+INFO-FLOW: Done: GCC PP time: 15.1 seconds per iteration
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
+Execute         list_core -type functional_unit 
+Execute         tidy_31 xilinx-systemc-detector /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp std=c++0x -directive=/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command         tidy_31 done; 2.94 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute         tidy_31 xilinx-directive2pragma /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp std=c++0x -directive=/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command         tidy_31 done; 2.56 sec.
+Execute         get_config_dataflow -strict_mode 
+Execute         ap_eval exec -ignorestderr /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xilinx-dataflow-lawyer.xf_fast_accel.pp.0.cpp.diag.yml /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 -fstrict-dataflow > /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xilinx-dataflow-lawyer.xf_fast_accel.pp.0.cpp.out.log 2> /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xilinx-dataflow-lawyer.xf_fast_accel.pp.0.cpp.err.log 
+Command         ap_eval done; 2.82 sec.
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../vitis_lib/vision/L1/include/common/xf_utility.hpp:301:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../vitis_lib/vision/L1/include/common/xf_utility.hpp:338:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../vitis_lib/vision/L1/include/common/xf_utility.hpp:442:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../vitis_lib/vision/L1/include/common/xf_utility.hpp:482:2
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: ../vitis_lib/vision/L1/include/features/xf_fast.hpp:923:23
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: ../vitis_lib/vision/L1/include/features/xf_fast.hpp:925:13
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: ../vitis_lib/vision/L1/include/features/xf_fast.hpp:920:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: ../vitis_lib/vision/L1/include/features/xf_fast.hpp:928:9
+Execute         send_msg_by_id WARNING @200-471@%s%s 8 xf_fast_accel.cpp 
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file xf_fast_accel.cpp
+Execute         tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp std=c++0x 
+Execute           ap_eval exec -ignorestderr /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/tidy-3.1.xf_fast_accel.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 > /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/tidy-3.1.xf_fast_accel.pp.0.cpp.out.log 2> /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/tidy-3.1.xf_fast_accel.pp.0.cpp.err.log 
+Command           ap_eval done; 4.9 sec.
+Execute           ap_eval exec -ignorestderr /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pp.0.cpp -- -std=c++0x -fhls -ferror-limit=0 > /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xilinx-legacy-rewriter.xf_fast_accel.pp.0.cpp.out.log 2> /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xilinx-legacy-rewriter.xf_fast_accel.pp.0.cpp.err.log 
+Command           ap_eval done; 2.34 sec.
+Command         tidy_31 done; 7.39 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 12.9 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute         tidy_31 xilinx-ssdm-intrinsics-arguments /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pragma.1.cpp std=c++0x 
+INFO-FLOW: exec /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pragma.1.cpp -- -std=c++0x -fhls -ferror-limit=0
+Command         tidy_31 done; 5.04 sec.
+Execute         ap_part_info -name xc7z020-clg484-2 -data info 
+INFO-FLOW: Processing labels
+Execute         clang -src /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pragma.2.cpp"  -I../vitis_lib/vision/L1/include -D__SDSVHLS__ -std=c++0x  -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot" -I "/mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.bc" 
+INFO-FLOW: exec /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.pragma.2.cpp -I../vitis_lib/vision/L1/include -D__SDSVHLS__ -std=c++0x -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot -I /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.bc
+Command         clang done; 5.97 sec.
+INFO-FLOW: Linking Debug ...
+Execute         llvm-ld /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xf_fast_accel.g.bc -hls-opt -except-internalize fast_accel -L/mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.g 
+Command         llvm-ld done; 2.64 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 6049 ; free virtual = 55189
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 6056 ; free virtual = 55197
+Execute         get_config_sdx -target 
+Execute         opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute           cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute           transform -promote-dbg-pointer /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.pp.bc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.pp.0.bc -f 
+Command           transform done; 0.13 sec.
+Execute           llvm-ld /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/mnt/c/fpgaXilinx/Vivado/2019.2/lnx64/lib -lfloatconversion -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.g.0 
+Command           llvm-ld done; 2.27 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute           transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top fast_accel -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.g.0.bc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-489] Unrolling loop 'Loop-7.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:865) in function 'void xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>(xf::cv::Mat<FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE>&, xf::cv::Mat<FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE>&, ap_uint<8>, unsigned short, unsigned short)' completely with a factor of 1.
+INFO: [XFORM 203-603] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::init' into 'xf::cv::Mat<0, 2160, 3840, 1>::Mat.1' (../vitis_lib/vision/L1/include/common/xf_structs.hpp:650).
+INFO: [XFORM 203-603] Inlining function 'xf::cv::xFCoreScore' into 'xf::cv::xFfastProc<1, 1, 0, 7, 49>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:203).
+INFO: [XFORM 203-603] Inlining function 'xf::cv::xFfastProc<1, 1, 0, 7, 49>' into 'xf::cv::ProcessFast<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:426).
+INFO: [XFORM 203-603] Inlining function 'xf::cv::ProcessFast<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' into 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:541).
+INFO: [XFORM 203-603] Inlining function 'xf::cv::xFnmsProc<1, 0, 3, 9>' into 'xf::cv::Processfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:776).
+INFO: [XFORM 203-603] Inlining function 'xf::cv::Processfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' into 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:881).
+Command           transform done; 0.98 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 6052 ; free virtual = 55193
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute           transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.g.1.bc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::read' into 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:516) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::write' into 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:435->../vitis_lib/vision/L1/include/features/xf_fast.hpp:541) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::read' into 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:856) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::write' into 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:779->../vitis_lib/vision/L1/include/features/xf_fast.hpp:881) automatically.
+Command           transform done; 0.77 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute           transform -syn-check /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.g.2.prechk.bc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+WARNING: [SYNCHK 200-23] ../vitis_lib/vision/L1/include/features/xf_fast.hpp:204: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+Command           transform done; 0.13 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:48 ; elapsed = 00:00:59 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 6033 ; free virtual = 55173
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.g.1.bc to /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute           transform -hls -tmp /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.o.1.bc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'dst.data.V' (xf_fast_accel.cpp:40).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'src.data.V' (xf_fast_accel.cpp:40).
+WARNING: [XFORM 203-505] Ignore pipeline pragma in Loop whose tripcount is only 1 (../vitis_lib/vision/L1/include/features/xf_fast.hpp:126) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Col_Loop' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:630) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Col_Loop' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:265) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 2 for loop 'Loop-3-1-2-0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:789:1) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 3 to 2 for loop 'Loop-3-1-2-0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:789:1) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 2 for loop 'Loop-3-2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:889:1) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 3 to 2 for loop 'Loop-3-2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:889:1) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 7 to 3 for loop 'Loop-2-0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:527:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 7 to 3 for loop 'Loop-2-0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:527:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 25 to 24 for loop 'Loop-3-1-4-1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:189:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 24 for loop 'Loop-3-1-4-1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:189:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1 for loop 'Loop-3-1-4' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:124:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 7 to 6 for loop 'Loop-3-1-5-0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:445:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 7 to 6 for loop 'Loop-3-1-5-0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:445:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 7 to 6 for loop 'Loop-3-2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:549:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 7 to 6 for loop 'Loop-3-2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:549:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:616) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:621) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:753) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:764) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.3' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:781) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.3.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:786) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.3' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:887) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:525) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:251) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:256) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:402) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:413) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'memset_flag_d' in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'memset_flag_d' in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 24.
+INFO: [HLS 200-489] Unrolling loop 'memset_flag_val' in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'memset_flag_val' in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 24.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:122) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:158) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:187) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 24.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.3' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:48) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 24.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.4' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:53) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 22.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.5' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:58) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 18.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.6' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:65) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.7' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:80) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.6' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:437) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.6.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:442) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.3' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:547) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 6.
+INFO: [XFORM 203-102] Partitioning array 'flag_d_min2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:41) automatically.
+INFO: [XFORM 203-102] Partitioning array 'flag_d_max2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:42) automatically.
+INFO: [XFORM 203-102] Partitioning array 'flag_d_min4' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:43) automatically.
+INFO: [XFORM 203-102] Partitioning array 'flag_d_max4' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:44) automatically.
+INFO: [XFORM 203-102] Partitioning array 'flag_d_min8' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:45) automatically.
+INFO: [XFORM 203-102] Partitioning array 'flag_d_max8' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:46) automatically.
+INFO: [XFORM 203-101] Partitioning array 'row_ind.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:465) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'OutputValues.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:474) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:487) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_cop.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:239) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'flag_val' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:115) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'flag_d' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:115) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'row_ind.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:808) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'OutputValues.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:815) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:828) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_cop.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:604) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf'  in dimension 2 completely.
+INFO: [XFORM 203-102] Partitioning array 'flag_val.0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:115) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::read' into 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>56' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:516) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::write' into 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>56' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:435->../vitis_lib/vision/L1/include/features/xf_fast.hpp:541) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::read' into 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>57' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:856) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::write' into 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>57' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:779->../vitis_lib/vision/L1/include/features/xf_fast.hpp:881) automatically.
+WARNING: [XFORM 203-713] All the elements of global array 'src_mat.data.V' should be updated in process function 'axis2xfMat', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'dst_mat.data.V' should be updated in process function 'xf::cv::fast<1, 0, 2160, 3840, 1>', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::cv::xFFastCornerDetection<0, 2160, 3840, 0, 1, 1, 12, 1>', detected/extracted 2 process function(s): 
+	 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>56'
+	 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>57'.
+INFO: [XFORM 203-712] Applying dataflow to function 'fast_accel', detected/extracted 4 process function(s): 
+	 'Block_Mat.exit73_proc69'
+	 'axis2xfMat'
+	 'xf::cv::fast<1, 0, 2160, 3840, 1>'
+	 'xfMat2axis'.
+WARNING: [XFORM 203-124] Array  '_dst.data.V': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'src_mat.data.V': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'dst_mat.data.V': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+Command           transform done; 6.03 sec.
+INFO-FLOW: Presyn 2...
+Execute           transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.o.1.tmp.bc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../vitis_lib/vision/L1/include/features/xf_fast.hpp:759:101) to (../vitis_lib/vision/L1/include/features/xf_fast.hpp:778:17) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>5783'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../vitis_lib/vision/L1/include/features/xf_fast.hpp:759:101) to (../vitis_lib/vision/L1/include/features/xf_fast.hpp:778:17) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>5781'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../vitis_lib/vision/L1/include/features/xf_fast.hpp:408:101) to (../vitis_lib/vision/L1/include/features/xf_fast.hpp:434:17) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>5684'... converting 91 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../vitis_lib/vision/L1/include/features/xf_fast.hpp:408:101) to (../vitis_lib/vision/L1/include/features/xf_fast.hpp:434:17) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>5682'... converting 91 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>5781' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:507:47)...8 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>5682' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:37:47)...19 expression(s) balanced.
+Command           transform done; 2.28 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:55 ; elapsed = 00:01:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 6006 ; free virtual = 55147
+INFO-FLOW: Building ssdm...
+Execute           transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.o.2.bc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+WARNING: [XFORM 203-631] Renaming function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>5781' to 'xFfastnms5781' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:507:47)
+WARNING: [XFORM 203-631] Renaming function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>5682' to 'xFfast7x75682' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:37:47)
+WARNING: [XFORM 203-631] Renaming function 'xf::cv::xFFastCornerDetection<0, 2160, 3840, 0, 1, 1, 12, 1>' to 'xFFastCornerDetectio' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:914:1)
+WARNING: [XFORM 203-631] Renaming function 'xf::cv::fast<1, 0, 2160, 3840, 1>' to 'fast' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:68:2)
+WARNING: [XFORM 203-631] Renaming function 'Block_Mat.exit73_proc69' to 'Block_Mat.exit73_pro' (xf_fast_accel.cpp:51)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf[0].V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:870:35)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf[0].V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:856:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf[0].V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:637:47)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf[0].V.i' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:530:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf[0].V.i' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:516:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf[0].V.i' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:272:47)
+Command           transform done; 2.57 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:58 ; elapsed = 00:01:10 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 5945 ; free virtual = 55085
+INFO-FLOW: Finish building internal data model.
+Command         opt_and_import_c done; 15.4 sec.
+Command       elaborate done; 61.3 sec.
+Execute       autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'fast_accel' ...
+Execute         ap_set_top_model fast_accel 
+WARNING: [SYN 201-103] Legalizing function name 'Block_Mat.exit73_pro' to 'Block_Mat_exit73_pro'.
+Execute         get_model_list fast_accel -filter all-wo-channel -topdown 
+Execute         preproc_iomode -model fast_accel 
+Execute         preproc_iomode -model xfMat2axis 
+Execute         preproc_iomode -model fast 
+Execute         preproc_iomode -model xFFastCornerDetectio 
+Execute         preproc_iomode -model xFfastnms5781 
+Execute         preproc_iomode -model xFfast7x75682 
+Execute         preproc_iomode -model axis2xfMat 
+Execute         preproc_iomode -model Block_Mat.exit73_pro 
+Execute         get_model_list fast_accel -filter all-wo-channel 
+INFO-FLOW: Model list for configure: Block_Mat.exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel
+INFO-FLOW: Configuring Module : Block_Mat.exit73_pro ...
+Execute         set_default_model Block_Mat.exit73_pro 
+Execute         apply_spec_resource_limit Block_Mat.exit73_pro 
+INFO-FLOW: Configuring Module : axis2xfMat ...
+Execute         set_default_model axis2xfMat 
+Execute         apply_spec_resource_limit axis2xfMat 
+INFO-FLOW: Configuring Module : xFfast7x75682 ...
+Execute         set_default_model xFfast7x75682 
+Execute         apply_spec_resource_limit xFfast7x75682 
+INFO-FLOW: Configuring Module : xFfastnms5781 ...
+Execute         set_default_model xFfastnms5781 
+Execute         apply_spec_resource_limit xFfastnms5781 
+INFO-FLOW: Configuring Module : xFFastCornerDetectio ...
+Execute         set_default_model xFFastCornerDetectio 
+Execute         apply_spec_resource_limit xFFastCornerDetectio 
+INFO-FLOW: Configuring Module : fast ...
+Execute         set_default_model fast 
+Execute         apply_spec_resource_limit fast 
+INFO-FLOW: Configuring Module : xfMat2axis ...
+Execute         set_default_model xfMat2axis 
+Execute         apply_spec_resource_limit xfMat2axis 
+INFO-FLOW: Configuring Module : fast_accel ...
+Execute         set_default_model fast_accel 
+Execute         apply_spec_resource_limit fast_accel 
+INFO-FLOW: Model list for preprocess: Block_Mat.exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel
+INFO-FLOW: Preprocessing Module: Block_Mat.exit73_pro ...
+Execute         set_default_model Block_Mat.exit73_pro 
+Execute         cdfg_preprocess -model Block_Mat.exit73_pro 
+Execute         rtl_gen_preprocess Block_Mat.exit73_pro 
+INFO-FLOW: Preprocessing Module: axis2xfMat ...
+Execute         set_default_model axis2xfMat 
+Execute         cdfg_preprocess -model axis2xfMat 
+Execute         rtl_gen_preprocess axis2xfMat 
+INFO-FLOW: Preprocessing Module: xFfast7x75682 ...
+Execute         set_default_model xFfast7x75682 
+Execute         cdfg_preprocess -model xFfast7x75682 
+Execute         rtl_gen_preprocess xFfast7x75682 
+INFO-FLOW: Preprocessing Module: xFfastnms5781 ...
+Execute         set_default_model xFfastnms5781 
+Execute         cdfg_preprocess -model xFfastnms5781 
+Execute         rtl_gen_preprocess xFfastnms5781 
+INFO-FLOW: Preprocessing Module: xFFastCornerDetectio ...
+Execute         set_default_model xFFastCornerDetectio 
+Execute         cdfg_preprocess -model xFFastCornerDetectio 
+Execute         rtl_gen_preprocess xFFastCornerDetectio 
+INFO-FLOW: Preprocessing Module: fast ...
+Execute         set_default_model fast 
+Execute         cdfg_preprocess -model fast 
+Execute         rtl_gen_preprocess fast 
+INFO-FLOW: Preprocessing Module: xfMat2axis ...
+Execute         set_default_model xfMat2axis 
+Execute         cdfg_preprocess -model xfMat2axis 
+Execute         rtl_gen_preprocess xfMat2axis 
+INFO-FLOW: Preprocessing Module: fast_accel ...
+Execute         set_default_model fast_accel 
+Execute         cdfg_preprocess -model fast_accel 
+Execute         rtl_gen_preprocess fast_accel 
+INFO-FLOW: Model list for synthesis: Block_Mat.exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_Mat_exit73_pro' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model Block_Mat.exit73_pro 
+Execute         schedule -model Block_Mat.exit73_pro 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.26 sec.
+INFO: [HLS 200-111]  Elapsed time: 70.34 seconds; current allocated memory: 227.875 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.verbose.sched.rpt 
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.sched.adb -f 
+INFO-FLOW: Finish scheduling Block_Mat.exit73_pro.
+Execute         set_default_model Block_Mat.exit73_pro 
+Execute         bind -model Block_Mat.exit73_pro 
+BIND OPTION: model=Block_Mat.exit73_pro
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.14 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 227.986 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.verbose.bind.rpt 
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.bind.adb -f 
+INFO-FLOW: Finish binding Block_Mat.exit73_pro.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'axis2xfMat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model axis2xfMat 
+Execute         schedule -model axis2xfMat 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.54 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.73 seconds; current allocated memory: 228.133 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.verbose.sched.rpt 
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.sched.adb -f 
+INFO-FLOW: Finish scheduling axis2xfMat.
+Execute         set_default_model axis2xfMat 
+Execute         bind -model axis2xfMat 
+BIND OPTION: model=axis2xfMat
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.15 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 228.308 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.verbose.bind.rpt 
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.bind.adb -f 
+INFO-FLOW: Finish binding axis2xfMat.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFfast7x75682' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model xFfast7x75682 
+Execute         schedule -model xFfast7x75682 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'read_lines.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Col_Loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 13.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 3.13 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.36 seconds; current allocated memory: 231.511 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.verbose.sched.rpt 
+Command         syn_report done; 0.91 sec.
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.sched.adb -f 
+Command         db_write done; 0.41 sec.
+INFO-FLOW: Finish scheduling xFfast7x75682.
+Execute         set_default_model xFfast7x75682 
+Execute         bind -model xFfast7x75682 
+BIND OPTION: model=xFfast7x75682
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_0_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_1_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_2_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_3_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_4_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_5_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_6_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 1.03 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.36 seconds; current allocated memory: 235.996 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.verbose.bind.rpt 
+Command         syn_report done; 2.67 sec.
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.bind.adb -f 
+Command         db_write done; 0.52 sec.
+INFO-FLOW: Finish binding xFfast7x75682.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFfastnms5781' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model xFfastnms5781 
+Execute         schedule -model xFfastnms5781 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'read_lines.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Col_Loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.55 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.78 seconds; current allocated memory: 237.454 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.verbose.sched.rpt 
+Command         syn_report done; 0.28 sec.
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.sched.adb -f 
+Command         db_write done; 0.15 sec.
+INFO-FLOW: Finish scheduling xFfastnms5781.
+Execute         set_default_model xFfastnms5781 
+Execute         bind -model xFfastnms5781 
+BIND OPTION: model=xFfastnms5781
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_0_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_1_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_2_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.34 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.77 seconds; current allocated memory: 238.359 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.verbose.bind.rpt 
+Command         syn_report done; 0.48 sec.
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.bind.adb -f 
+Command         db_write done; 0.22 sec.
+INFO-FLOW: Finish binding xFfastnms5781.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFFastCornerDetectio' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model xFFastCornerDetectio 
+Execute         schedule -model xFFastCornerDetectio 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.89 seconds; current allocated memory: 238.531 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.verbose.sched.rpt 
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.sched.adb -f 
+INFO-FLOW: Finish scheduling xFFastCornerDetectio.
+Execute         set_default_model xFFastCornerDetectio 
+Execute         bind -model xFFastCornerDetectio 
+BIND OPTION: model=xFFastCornerDetectio
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 1.71 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.84 seconds; current allocated memory: 239.091 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.verbose.bind.rpt 
+Command         syn_report done; 2.12 sec.
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.bind.adb -f 
+INFO-FLOW: Finish binding xFFastCornerDetectio.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fast' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model fast 
+Execute         schedule -model fast 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.26 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.53 seconds; current allocated memory: 239.850 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.verbose.sched.rpt 
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.sched.adb -f 
+INFO-FLOW: Finish scheduling fast.
+Execute         set_default_model fast 
+Execute         bind -model fast 
+BIND OPTION: model=fast
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 1.05 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.15 seconds; current allocated memory: 240.171 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.verbose.bind.rpt 
+Command         syn_report done; 2.06 sec.
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.bind.adb -f 
+INFO-FLOW: Finish binding fast.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xfMat2axis' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model xfMat2axis 
+Execute         schedule -model xfMat2axis 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.22 sec.
+INFO: [HLS 200-111]  Elapsed time: 2.37 seconds; current allocated memory: 240.980 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.verbose.sched.rpt 
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.sched.adb -f 
+INFO-FLOW: Finish scheduling xfMat2axis.
+Execute         set_default_model xfMat2axis 
+Execute         bind -model xfMat2axis 
+BIND OPTION: model=xfMat2axis
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 0.12 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 241.169 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.verbose.bind.rpt 
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.bind.adb -f 
+INFO-FLOW: Finish binding xfMat2axis.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fast_accel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         set_default_model fast_accel 
+Execute         schedule -model fast_accel 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command         schedule done; 0.12 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 241.358 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.verbose.sched.rpt 
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.sched.adb -f 
+INFO-FLOW: Finish scheduling fast_accel.
+Execute         set_default_model fast_accel 
+Execute         bind -model fast_accel 
+BIND OPTION: model=fast_accel
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command         bind done; 2.94 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.12 seconds; current allocated memory: 242.585 MB.
+Execute         syn_report -verbosereport -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.verbose.bind.rpt 
+Command         syn_report done; 2.26 sec.
+Execute         db_write -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.bind.adb -f 
+INFO-FLOW: Finish binding fast_accel.
+Execute         get_model_list fast_accel -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute         rtl_gen_preprocess Block_Mat.exit73_pro 
+Execute         rtl_gen_preprocess axis2xfMat 
+Execute         rtl_gen_preprocess xFfast7x75682 
+Execute         rtl_gen_preprocess xFfastnms5781 
+Execute         rtl_gen_preprocess xFFastCornerDetectio 
+Execute         rtl_gen_preprocess fast 
+Execute         rtl_gen_preprocess xfMat2axis 
+Execute         rtl_gen_preprocess fast_accel 
+INFO-FLOW: Model list for RTL generation: Block_Mat.exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_Mat_exit73_pro' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model Block_Mat.exit73_pro -vendor xilinx -mg_file /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_Mat_exit73_pro'.
+INFO: [HLS 200-111]  Elapsed time: 2.51 seconds; current allocated memory: 243.483 MB.
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute         gen_rtl Block_Mat.exit73_pro -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/systemc/Block_Mat_exit73_pro -synmodules Block_Mat.exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel 
+Execute         gen_rtl Block_Mat.exit73_pro -style xilinx -f -lang vhdl -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/vhdl/Block_Mat_exit73_pro 
+Execute         gen_rtl Block_Mat.exit73_pro -style xilinx -f -lang vlog -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/verilog/Block_Mat_exit73_pro 
+Execute         syn_report -csynth -model Block_Mat.exit73_pro -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/Block_Mat_exit73_pro_csynth.rpt 
+Execute         syn_report -rtlxml -model Block_Mat.exit73_pro -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/Block_Mat_exit73_pro_csynth.xml 
+Execute         syn_report -verbosereport -model Block_Mat.exit73_pro -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.verbose.rpt 
+Execute         db_write -model Block_Mat.exit73_pro -f -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.adb 
+Execute         gen_tb_info Block_Mat.exit73_pro -p /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axis2xfMat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model axis2xfMat -vendor xilinx -mg_file /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axis2xfMat'.
+INFO: [HLS 200-111]  Elapsed time: 0.5 seconds; current allocated memory: 244.180 MB.
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute         gen_rtl axis2xfMat -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/systemc/axis2xfMat -synmodules Block_Mat.exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel 
+Execute         gen_rtl axis2xfMat -style xilinx -f -lang vhdl -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/vhdl/axis2xfMat 
+Execute         gen_rtl axis2xfMat -style xilinx -f -lang vlog -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/verilog/axis2xfMat 
+Execute         syn_report -csynth -model axis2xfMat -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/axis2xfMat_csynth.rpt 
+Execute         syn_report -rtlxml -model axis2xfMat -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/axis2xfMat_csynth.xml 
+Execute         syn_report -verbosereport -model axis2xfMat -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.verbose.rpt 
+Execute         db_write -model axis2xfMat -f -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.adb 
+Execute         gen_tb_info axis2xfMat -p /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFfast7x75682' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model xFfast7x75682 -vendor xilinx -mg_file /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'xFfast7x75682_buf_0_V' to 'xFfast7x75682_bufbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xFfast7x75682_buf_1_V' to 'xFfast7x75682_bufcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xFfast7x75682_buf_2_V' to 'xFfast7x75682_bufdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xFfast7x75682_buf_3_V' to 'xFfast7x75682_bufeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xFfast7x75682_buf_4_V' to 'xFfast7x75682_buffYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xFfast7x75682_buf_5_V' to 'xFfast7x75682_bufg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xFfast7x75682_buf_6_V' to 'xFfast7x75682_bufhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fast_accel_mux_73_13_1_1' to 'fast_accel_mux_73ibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fast_accel_mux_73_8_1_1' to 'fast_accel_mux_73jbC' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fast_accel_mux_73ibs': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fast_accel_mux_73jbC': 14 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFfast7x75682'.
+Command         create_rtl_model done; 0.89 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.33 seconds; current allocated memory: 251.329 MB.
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute         gen_rtl xFfast7x75682 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/systemc/xFfast7x75682 -synmodules Block_Mat.exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel 
+Execute         gen_rtl xFfast7x75682 -style xilinx -f -lang vhdl -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/vhdl/xFfast7x75682 
+Execute         gen_rtl xFfast7x75682 -style xilinx -f -lang vlog -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/verilog/xFfast7x75682 
+Command         gen_rtl done; 0.12 sec.
+Execute         syn_report -csynth -model xFfast7x75682 -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/xFfast7x75682_csynth.rpt 
+Command         syn_report done; 1.56 sec.
+Execute         syn_report -rtlxml -model xFfast7x75682 -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/xFfast7x75682_csynth.xml 
+Command         syn_report done; 0.88 sec.
+Execute         syn_report -verbosereport -model xFfast7x75682 -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.verbose.rpt 
+Command         syn_report done; 3.8 sec.
+Execute         db_write -model xFfast7x75682 -f -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.adb 
+Command         db_write done; 1.91 sec.
+Execute         gen_tb_info xFfast7x75682 -p /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFfastnms5781' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model xFfastnms5781 -vendor xilinx -mg_file /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'xFfastnms5781_buf_0_V' to 'xFfastnms5781_bufkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xFfastnms5781_buf_1_V' to 'xFfastnms5781_buflbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'xFfastnms5781_buf_2_V' to 'xFfastnms5781_bufmb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fast_accel_mux_32_8_1_1' to 'fast_accel_mux_32ncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'fast_accel_mux_32_13_1_1' to 'fast_accel_mux_32ocq' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'fast_accel_mux_32ncg': 7 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fast_accel_mux_32ocq': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFfastnms5781'.
+Command         create_rtl_model done; 0.22 sec.
+INFO: [HLS 200-111]  Elapsed time: 9.66 seconds; current allocated memory: 271.286 MB.
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute         gen_rtl xFfastnms5781 -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/systemc/xFfastnms5781 -synmodules Block_Mat.exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel 
+Execute         gen_rtl xFfastnms5781 -style xilinx -f -lang vhdl -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/vhdl/xFfastnms5781 
+Execute         gen_rtl xFfastnms5781 -style xilinx -f -lang vlog -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/verilog/xFfastnms5781 
+Execute         syn_report -csynth -model xFfastnms5781 -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/xFfastnms5781_csynth.rpt 
+Command         syn_report done; 0.32 sec.
+Execute         syn_report -rtlxml -model xFfastnms5781 -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/xFfastnms5781_csynth.xml 
+Command         syn_report done; 0.12 sec.
+Execute         syn_report -verbosereport -model xFfastnms5781 -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.verbose.rpt 
+Command         syn_report done; 0.67 sec.
+Execute         db_write -model xFfastnms5781 -f -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.adb 
+Command         db_write done; 0.62 sec.
+Execute         gen_tb_info xFfastnms5781 -p /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xFFastCornerDetectio' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model xFFastCornerDetectio -vendor xilinx -mg_file /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'start_for_xFfastnms5781_U0' to 'start_for_xFfastnpcA' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xFFastCornerDetectio'.
+INFO: [HLS 200-111]  Elapsed time: 2.11 seconds; current allocated memory: 275.324 MB.
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute         gen_rtl xFFastCornerDetectio -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/systemc/xFFastCornerDetectio -synmodules Block_Mat.exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel 
+Execute         gen_rtl xFFastCornerDetectio -style xilinx -f -lang vhdl -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/vhdl/xFFastCornerDetectio 
+Execute         gen_rtl xFFastCornerDetectio -style xilinx -f -lang vlog -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/verilog/xFFastCornerDetectio 
+Execute         syn_report -csynth -model xFFastCornerDetectio -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/xFFastCornerDetectio_csynth.rpt 
+Execute         syn_report -rtlxml -model xFFastCornerDetectio -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/xFFastCornerDetectio_csynth.xml 
+Execute         syn_report -verbosereport -model xFFastCornerDetectio -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.verbose.rpt 
+Command         syn_report done; 2.07 sec.
+Execute         db_write -model xFFastCornerDetectio -f -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.adb 
+Command         db_write done; 0.37 sec.
+Execute         gen_tb_info xFFastCornerDetectio -p /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fast' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model fast -vendor xilinx -mg_file /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fast'.
+INFO: [HLS 200-111]  Elapsed time: 2.7 seconds; current allocated memory: 276.526 MB.
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute         gen_rtl fast -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/systemc/fast -synmodules Block_Mat.exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel 
+Execute         gen_rtl fast -style xilinx -f -lang vhdl -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/vhdl/fast 
+Execute         gen_rtl fast -style xilinx -f -lang vlog -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/verilog/fast 
+Execute         syn_report -csynth -model fast -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/fast_csynth.rpt 
+Execute         syn_report -rtlxml -model fast -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/fast_csynth.xml 
+Execute         syn_report -verbosereport -model fast -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.verbose.rpt 
+Command         syn_report done; 2.27 sec.
+Execute         db_write -model fast -f -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.adb 
+Command         db_write done; 0.39 sec.
+Execute         gen_tb_info fast -p /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'xfMat2axis' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model xfMat2axis -vendor xilinx -mg_file /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'xfMat2axis'.
+INFO: [HLS 200-111]  Elapsed time: 2.89 seconds; current allocated memory: 277.881 MB.
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute         gen_rtl xfMat2axis -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/systemc/xfMat2axis -synmodules Block_Mat.exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel 
+Execute         gen_rtl xfMat2axis -style xilinx -f -lang vhdl -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/vhdl/xfMat2axis 
+Execute         gen_rtl xfMat2axis -style xilinx -f -lang vlog -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/verilog/xfMat2axis 
+Execute         syn_report -csynth -model xfMat2axis -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/xfMat2axis_csynth.rpt 
+Execute         syn_report -rtlxml -model xfMat2axis -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/xfMat2axis_csynth.xml 
+Execute         syn_report -verbosereport -model xfMat2axis -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.verbose.rpt 
+Execute         db_write -model xfMat2axis -f -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.adb 
+Command         db_write done; 0.52 sec.
+Execute         gen_tb_info xfMat2axis -p /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'fast_accel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute         get_config_rtl -module_prefix 
+Execute         get_config_rtl -module_auto_prefix 
+Execute         create_rtl_model fast_accel -vendor xilinx -mg_file /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'fast_accel/src_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fast_accel/src_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fast_accel/dst_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fast_accel/dst_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'fast_accel/src_rows' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fast_accel/src_cols' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fast_accel/threshold' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'fast_accel/unused' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'fast_accel' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'src_rows', 'src_cols', 'threshold' and 'unused' to AXI-Lite port AXILiteS.
+WARNING: [RTGEN 206-101] RTL name 'fifo_w12_d2_A' is changed to 'fifo_w12_d2_A_x' due to conflict.
+INFO: [SYN 201-210] Renamed object name 'start_for_xfMat2axis_U0' to 'start_for_xfMat2aqcK' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'fast_accel/src_TLAST' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'fast_accel'.
+Command         create_rtl_model done; 0.3 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.26 seconds; current allocated memory: 279.260 MB.
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute         gen_rtl fast_accel -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/systemc/fast_accel -synmodules Block_Mat.exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel 
+Execute         gen_rtl fast_accel -istop -style xilinx -f -lang vhdl -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/vhdl/fast_accel 
+Execute         gen_rtl fast_accel -istop -style xilinx -f -lang vlog -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/verilog/fast_accel 
+Execute         syn_report -csynth -model fast_accel -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/fast_accel_csynth.rpt 
+Execute         syn_report -rtlxml -model fast_accel -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/syn/report/fast_accel_csynth.xml 
+Execute         syn_report -verbosereport -model fast_accel -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.verbose.rpt 
+Command         syn_report done; 2.18 sec.
+Execute         db_write -model fast_accel -f -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.adb 
+Command         db_write done; 0.46 sec.
+Execute         gen_tb_info fast_accel -p /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel 
+Execute         export_constraint_db -f -tool general -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.constraint.tcl 
+Execute         syn_report -designview -model fast_accel -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.design.xml 
+Command         syn_report done; 1.89 sec.
+Execute         get_config_rtl -disable_wave_debug 
+Execute         syn_report -wcfg -model fast_accel -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel_dataflow_ana.wcfg 
+Execute         syn_report -protoinst -model fast_accel -o /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.protoinst 
+Execute         get_config_debug -directory 
+Execute         sc_get_clocks fast_accel 
+Execute         get_config_export -vivado_clock 
+Execute         sc_get_portdomain fast_accel 
+INFO-FLOW: Model list for RTL component generation: Block_Mat.exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel
+INFO-FLOW: Handling components in module [Block_Mat_exit73_pro] ... 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.compgen.tcl 
+INFO-FLOW: Handling components in module [axis2xfMat] ... 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.compgen.tcl 
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Handling components in module [xFfast7x75682] ... 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.compgen.tcl 
+INFO-FLOW: Found component fast_accel_mux_73ibs.
+INFO-FLOW: Append model fast_accel_mux_73ibs
+INFO-FLOW: Found component fast_accel_mux_73jbC.
+INFO-FLOW: Append model fast_accel_mux_73jbC
+INFO-FLOW: Found component xFfast7x75682_bufbkb.
+INFO-FLOW: Append model xFfast7x75682_bufbkb
+INFO-FLOW: Handling components in module [xFfastnms5781] ... 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.compgen.tcl 
+INFO-FLOW: Found component fast_accel_mux_32ncg.
+INFO-FLOW: Append model fast_accel_mux_32ncg
+INFO-FLOW: Found component fast_accel_mux_32ocq.
+INFO-FLOW: Append model fast_accel_mux_32ocq
+INFO-FLOW: Handling components in module [xFFastCornerDetectio] ... 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.compgen.tcl 
+INFO-FLOW: Found component fifo_w8_d2_A.
+INFO-FLOW: Append model fifo_w8_d2_A
+INFO-FLOW: Found component fifo_w12_d2_A.
+INFO-FLOW: Append model fifo_w12_d2_A
+INFO-FLOW: Found component fifo_w12_d2_A.
+INFO-FLOW: Append model fifo_w12_d2_A
+INFO-FLOW: Found component start_for_xFfastnpcA.
+INFO-FLOW: Append model start_for_xFfastnpcA
+INFO-FLOW: Handling components in module [fast] ... 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.compgen.tcl 
+INFO-FLOW: Handling components in module [xfMat2axis] ... 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.compgen.tcl 
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Handling components in module [fast_accel] ... 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.tcl 
+INFO-FLOW: Found component fifo_w32_d3_A.
+INFO-FLOW: Append model fifo_w32_d3_A
+INFO-FLOW: Found component fifo_w32_d3_A.
+INFO-FLOW: Append model fifo_w32_d3_A
+INFO-FLOW: Found component fifo_w12_d2_A_x.
+INFO-FLOW: Append model fifo_w12_d2_A_x
+INFO-FLOW: Found component fifo_w12_d2_A_x.
+INFO-FLOW: Append model fifo_w12_d2_A_x
+INFO-FLOW: Found component fifo_w32_d3_A.
+INFO-FLOW: Append model fifo_w32_d3_A
+INFO-FLOW: Found component fifo_w8_d150_A.
+INFO-FLOW: Append model fifo_w8_d150_A
+INFO-FLOW: Found component fifo_w12_d3_A.
+INFO-FLOW: Append model fifo_w12_d3_A
+INFO-FLOW: Found component fifo_w12_d3_A.
+INFO-FLOW: Append model fifo_w12_d3_A
+INFO-FLOW: Found component fifo_w1_d150_A.
+INFO-FLOW: Append model fifo_w1_d150_A
+INFO-FLOW: Found component start_for_fast_U0.
+INFO-FLOW: Append model start_for_fast_U0
+INFO-FLOW: Found component start_for_xfMat2aqcK.
+INFO-FLOW: Append model start_for_xfMat2aqcK
+INFO-FLOW: Found component fast_accel_AXILiteS_s_axi.
+INFO-FLOW: Append model fast_accel_AXILiteS_s_axi
+INFO-FLOW: Found component regslice_core.
+INFO-FLOW: Append model regslice_core
+INFO-FLOW: Append model Block_Mat_exit73_pro
+INFO-FLOW: Append model axis2xfMat
+INFO-FLOW: Append model xFfast7x75682
+INFO-FLOW: Append model xFfastnms5781
+INFO-FLOW: Append model xFFastCornerDetectio
+INFO-FLOW: Append model fast
+INFO-FLOW: Append model xfMat2axis
+INFO-FLOW: Append model fast_accel
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: regslice_core fast_accel_mux_73ibs fast_accel_mux_73jbC xFfast7x75682_bufbkb fast_accel_mux_32ncg fast_accel_mux_32ocq fifo_w8_d2_A fifo_w12_d2_A fifo_w12_d2_A start_for_xFfastnpcA regslice_core fifo_w32_d3_A fifo_w32_d3_A fifo_w12_d2_A_x fifo_w12_d2_A_x fifo_w32_d3_A fifo_w8_d150_A fifo_w12_d3_A fifo_w12_d3_A fifo_w1_d150_A start_for_fast_U0 start_for_xfMat2aqcK fast_accel_AXILiteS_s_axi regslice_core Block_Mat_exit73_pro axis2xfMat xFfast7x75682 xFfastnms5781 xFFastCornerDetectio fast xfMat2axis fast_accel
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model fast_accel_mux_73ibs
+INFO-FLOW: To file: write model fast_accel_mux_73jbC
+INFO-FLOW: To file: write model xFfast7x75682_bufbkb
+INFO-FLOW: To file: write model fast_accel_mux_32ncg
+INFO-FLOW: To file: write model fast_accel_mux_32ocq
+INFO-FLOW: To file: write model fifo_w8_d2_A
+INFO-FLOW: To file: write model fifo_w12_d2_A
+INFO-FLOW: To file: write model fifo_w12_d2_A
+INFO-FLOW: To file: write model start_for_xFfastnpcA
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model fifo_w32_d3_A
+INFO-FLOW: To file: write model fifo_w32_d3_A
+INFO-FLOW: To file: write model fifo_w12_d2_A_x
+INFO-FLOW: To file: write model fifo_w12_d2_A_x
+INFO-FLOW: To file: write model fifo_w32_d3_A
+INFO-FLOW: To file: write model fifo_w8_d150_A
+INFO-FLOW: To file: write model fifo_w12_d3_A
+INFO-FLOW: To file: write model fifo_w12_d3_A
+INFO-FLOW: To file: write model fifo_w1_d150_A
+INFO-FLOW: To file: write model start_for_fast_U0
+INFO-FLOW: To file: write model start_for_xfMat2aqcK
+INFO-FLOW: To file: write model fast_accel_AXILiteS_s_axi
+INFO-FLOW: To file: write model regslice_core
+INFO-FLOW: To file: write model Block_Mat_exit73_pro
+INFO-FLOW: To file: write model axis2xfMat
+INFO-FLOW: To file: write model xFfast7x75682
+INFO-FLOW: To file: write model xFfastnms5781
+INFO-FLOW: To file: write model xFFastCornerDetectio
+INFO-FLOW: To file: write model fast
+INFO-FLOW: To file: write model xfMat2axis
+INFO-FLOW: To file: write model fast_accel
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute         syn_report -model fast_accel -printsummary 
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 140.51 MHz
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.15 sec.
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.26 sec.
+Command         ap_source done; 0.26 sec.
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-278] Implementing memory 'xFfast7x75682_bufbkb_ram (RAM_S2P_BRAM)' using block RAMs.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Command         ap_source done; 0.2 sec.
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'p_dst_data_V_U(fifo_w8_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'p_image_height_c_U(fifo_w12_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'p_image_width_c_U(fifo_w12_d2_A)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xFfastnpcA_U(start_for_xFfastnpcA)' using Shift Registers.
+Command         ap_source done; 0.3 sec.
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'src_mat_rows_c_U(fifo_w32_d3_A)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'src_mat_cols_c_U(fifo_w32_d3_A)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'src_rows_cast1_loc_c_U(fifo_w12_d2_A_x)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'src_cols_cast2_loc_c_U(fifo_w12_d2_A_x)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'threshold_c_U(fifo_w32_d3_A)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'src_mat_data_V_U(fifo_w8_d150_A)' using Block RAMs.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'src_rows_cast1_loc_c_1_U(fifo_w12_d3_A)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'src_cols_cast2_loc_c_1_U(fifo_w12_d3_A)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'dst_mat_data_V_U(fifo_w1_d150_A)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_fast_U0_U(start_for_fast_U0)' using Shift Registers.
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_xfMat2aqcK_U(start_for_xfMat2aqcK)' using Shift Registers.
+Execute           source ./AXILiteS.slave.tcl 
+Execute           is_m_axi_addr64 
+Command         ap_source done; 1.45 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.15 sec.
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command           ap_source done; 0.34 sec.
+Command         ap_source done; 0.34 sec.
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=fast_accel xml_exists=0
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.tcl 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute           ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Command         ap_source done; 0.41 sec.
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.compgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.constraint.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=8
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=8
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=32 #gSsdmPorts=8
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_export -xo 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.dataonly.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.dataonly.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_sdx -target 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.dataonly.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.constraint.tcl 
+Execute         sc_get_clocks fast_accel 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute         get_config_debug -directory 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.tbgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.tbgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.tbgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.tbgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.tbgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.tbgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.tbgen.tcl 
+Execute         source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute         get_config_sdx -target 
+Execute         get_config_sdx -profile 
+Execute         get_config_rtl -kernel_profile 
+Execute         get_config_rtl -stall_sig_gen 
+Execute         get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:01:32 ; elapsed = 00:02:13 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 5851 ; free virtual = 54992
+INFO: [VHDL 208-304] Generating VHDL RTL for fast_accel.
+INFO: [VLOG 209-307] Generating Verilog RTL for fast_accel.
+Command       autosyn done; 62.74 sec.
+Command     csynth_design done; 124.07 sec.
+Execute     export_design -format ip_catalog -description Fast corner detection IP -display_name fast_accel2 
+Execute       get_config_export -acc 
+Execute       get_config_export -clock_margin 
+Execute       get_config_export -custom_script 
+Execute       get_config_export -driver_input_dir 
+Execute       get_config_export -ipname 
+Execute       get_config_export -kernel_drc 
+Execute       get_config_export -library 
+Execute       get_config_export -qor_test 
+Execute       get_config_export -rtl 
+Execute       get_config_export -sdaccel 
+Execute       get_config_export -sim 
+Execute       get_config_export -taxonomy 
+Execute       get_config_export -use_ip 
+Execute       get_config_export -use_netlist 
+Execute       get_config_export -vendor 
+Execute       get_config_export -version 
+Execute       get_config_export -xo 
+Execute       config_export -description=Fast corner detection IP -display_name=fast_accel2 -format=ip_catalog 
+INFO-FLOW: DBG:CMD: export_design_wrap: -format ip_catalog -description {Fast corner detection IP} -display_name fast_accel2
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -vivado_clock 
+Execute       get_top 
+Execute       get_config_sdx -target 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -target 
+INFO-FLOW: DBG:CMD:   auto_impl: pack: -export -tool vivado -sdx-target none
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.15 sec.
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.27 sec.
+Command       ap_source done; 0.28 sec.
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: automg_wrap -export -pcore_version 1.00.a -rtl both -sdx-target none -tool Vivado -impltomg_flag
+INFO-FLOW: DBG:CMD:     auto_generate -export -pcore_version 1.00.a -rtl both -sdx-target none -tool Vivado -impltomg_flag
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.2 sec.
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.38 sec.
+Command       ap_source done; 0.38 sec.
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.tcl 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute         ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Command       ap_source done; 0.19 sec.
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.compgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.tcl 
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.constraint.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=8
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=8
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=0 g_has_adaptors=false generate_bd_files=1 #modelList=32 #gSsdmPorts=8
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_export -xo 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.dataonly.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.dataonly.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.dataonly.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.constraint.tcl 
+Execute       sc_get_clocks fast_accel 
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_debug -directory 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/Block_Mat_exit73_pro.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/axis2xfMat.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfast7x75682.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFfastnms5781.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xFFastCornerDetectio.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/xfMat2axis.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       get_config_rtl -kernel_profile 
+Execute       get_config_rtl -stall_sig_gen 
+Execute       get_config_rtl -profile 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       copying IP vlog from /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/impl/verilog
+INFO-FLOW: DBG:CMD:       copying IP vhdl from /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/impl/vhdl
+INFO-FLOW: DBG:CMD:       copy ip_driver_dir 1_0 /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/driver
+INFO-FLOW: DBG:CMD:       generate_ip_script #gSsdmPorts=8
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.dataonly.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.compgen.dataonly.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_debug -directory 
+INFO-FLOW: DBG:CMD:       generate_ip_auxiliary
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=fast_accel
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_top_info
+INFO-FLOW: DBG:CMD:       prepArgInfo -> loadAnalyze_DB top_module=fast_accel
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.rtl_wrap.cfg.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_ip_bd_script
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.constraint.tcl 
+INFO-FLOW: DBG:CMD:       generate_ipi_example_script
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO-FLOW: DBG:CMD:       generate_syn_sh
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD:       generate_imp_constraints
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.constraint.tcl 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/fast_accel.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO-FLOW: DBG:CMD: read_platform_lib /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
+Execute       source /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/.autopilot/db/global.setting.tcl 
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.16 sec.
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.34 sec.
+Command       ap_source done; 0.35 sec.
+Execute       source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source /mnt/c/fpgaXilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
+Execute       ap_part_info -name xc7z020-clg484-2 -data names -quiet 
+Execute       ap_part_info -name xc7z020-clg484-2 -data info -quiet 
+INFO-FLOW: DBG:CMD:     exec /mnt/c/fpgaXilinx/fastPynq/ip/hls/fast/fast/solution1/impl/ip/pack.sh
+Command     export_design done; 51.59 sec.
+Execute     cleanup_all 

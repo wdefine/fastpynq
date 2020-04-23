@@ -1,0 +1,164 @@
+
+
+================================================================
+== Vivado HLS Report for 'fast'
+================================================================
+* Date:           Thu Apr 23 12:11:00 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        fast
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 7.117 ns |   2.70 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  8361897|  8361897| 83.619 ms | 83.619 ms |  8361897|  8361897|   none  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------+----------------------+---------+---------+-----------+-----------+---------+---------+----------+
+        |                                |                      |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline |
+        |            Instance            |        Module        |   min   |   max   |    min    |    max    |   min   |   max   |   Type   |
+        +--------------------------------+----------------------+---------+---------+-----------+-----------+---------+---------+----------+
+        |grp_xFFastCornerDetectio_fu_46  |xFFastCornerDetectio  |  8361896|  8361896| 83.619 ms | 83.619 ms |  8361897|  8361897| dataflow |
+        +--------------------------------+----------------------+---------+---------+-----------+-----------+---------+---------+----------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
++-----------------+---------+-------+--------+-------+-----+
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|      3|    -|
+|FIFO             |        -|      -|       -|      -|    -|
+|Instance         |       20|      -|    5856|   6109|    0|
+|Memory           |        -|      -|       -|      -|    -|
+|Multiplexer      |        -|      -|       -|     21|    -|
+|Register         |        -|      -|      46|      -|    -|
++-----------------+---------+-------+--------+-------+-----+
+|Total            |       20|      0|    5902|   6133|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Available        |      280|    220|  106400|  53200|    0|
++-----------------+---------+-------+--------+-------+-----+
+|Utilization (%)  |        7|      0|       5|     11|    0|
++-----------------+---------+-------+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------+----------------------+---------+-------+------+------+-----+
+    |            Instance            |        Module        | BRAM_18K| DSP48E|  FF  |  LUT | URAM|
+    +--------------------------------+----------------------+---------+-------+------+------+-----+
+    |grp_xFFastCornerDetectio_fu_46  |xFFastCornerDetectio  |       20|      0|  5856|  6109|    0|
+    +--------------------------------+----------------------+---------+-------+------+------+-----+
+    |Total                           |                      |       20|      0|  5856|  6109|    0|
+    +--------------------------------+----------------------+---------+-------+------+------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------------------------+----------+-------+---+----+------------+------------+
+    |                  Variable Name                  | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-------------------------------------------------+----------+-------+---+----+------------+------------+
+    |ap_block_state1                                  |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_grp_xFFastCornerDetectio_fu_46_ap_done   |    or    |      0|  0|   1|           1|           1|
+    |ap_sync_grp_xFFastCornerDetectio_fu_46_ap_ready  |    or    |      0|  0|   1|           1|           1|
+    +-------------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                            |          |      0|  0|   3|           3|           3|
+    +-------------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------+----+-----------+-----+-----------+
+    |          Name          | LUT| Input Size| Bits| Total Bits|
+    +------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm               |   3|          3|    1|          3|
+    |ap_done                 |   3|          2|    1|          2|
+    |p_dst_mat_data_V_write  |   3|          2|    1|          2|
+    |p_src_mat_cols_blk_n    |   3|          2|    1|          2|
+    |p_src_mat_data_V_read   |   3|          2|    1|          2|
+    |p_src_mat_rows_blk_n    |   3|          2|    1|          2|
+    |threshold_blk_n         |   3|          2|    1|          2|
+    +------------------------+----+-----------+-----+-----------+
+    |Total                   |  21|         15|    7|         15|
+    +------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |                         Name                        | FF | LUT| Bits| Const Bits|
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                            |   2|   0|    2|          0|
+    |ap_done_reg                                          |   1|   0|    1|          0|
+    |ap_sync_reg_grp_xFFastCornerDetectio_fu_46_ap_done   |   1|   0|    1|          0|
+    |ap_sync_reg_grp_xFFastCornerDetectio_fu_46_ap_ready  |   1|   0|    1|          0|
+    |grp_xFFastCornerDetectio_fu_46_ap_start_reg          |   1|   0|    1|          0|
+    |trunc_ln68_reg_72                                    |   8|   0|    8|          0|
+    |trunc_ln946_1_reg_82                                 |  16|   0|   16|          0|
+    |trunc_ln946_reg_77                                   |  16|   0|   16|          0|
+    +-----------------------------------------------------+----+----+-----+-----------+
+    |Total                                                |  46|   0|   46|          0|
+    +-----------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |   Source Object  |    C Type    |
++--------------------------+-----+-----+------------+------------------+--------------+
+|ap_clk                    |  in |    1| ap_ctrl_hs |       fast       | return value |
+|ap_rst                    |  in |    1| ap_ctrl_hs |       fast       | return value |
+|ap_start                  |  in |    1| ap_ctrl_hs |       fast       | return value |
+|ap_done                   | out |    1| ap_ctrl_hs |       fast       | return value |
+|ap_continue               |  in |    1| ap_ctrl_hs |       fast       | return value |
+|ap_idle                   | out |    1| ap_ctrl_hs |       fast       | return value |
+|ap_ready                  | out |    1| ap_ctrl_hs |       fast       | return value |
+|p_src_mat_rows_dout       |  in |   32|   ap_fifo  |  p_src_mat_rows  |    pointer   |
+|p_src_mat_rows_empty_n    |  in |    1|   ap_fifo  |  p_src_mat_rows  |    pointer   |
+|p_src_mat_rows_read       | out |    1|   ap_fifo  |  p_src_mat_rows  |    pointer   |
+|p_src_mat_cols_dout       |  in |   32|   ap_fifo  |  p_src_mat_cols  |    pointer   |
+|p_src_mat_cols_empty_n    |  in |    1|   ap_fifo  |  p_src_mat_cols  |    pointer   |
+|p_src_mat_cols_read       | out |    1|   ap_fifo  |  p_src_mat_cols  |    pointer   |
+|p_src_mat_data_V_dout     |  in |    8|   ap_fifo  | p_src_mat_data_V |    pointer   |
+|p_src_mat_data_V_empty_n  |  in |    1|   ap_fifo  | p_src_mat_data_V |    pointer   |
+|p_src_mat_data_V_read     | out |    1|   ap_fifo  | p_src_mat_data_V |    pointer   |
+|p_dst_mat_data_V_din      | out |    1|   ap_fifo  | p_dst_mat_data_V |    pointer   |
+|p_dst_mat_data_V_full_n   |  in |    1|   ap_fifo  | p_dst_mat_data_V |    pointer   |
+|p_dst_mat_data_V_write    | out |    1|   ap_fifo  | p_dst_mat_data_V |    pointer   |
+|threshold_dout            |  in |   32|   ap_fifo  |     threshold    |    pointer   |
+|threshold_empty_n         |  in |    1|   ap_fifo  |     threshold    |    pointer   |
+|threshold_read            | out |    1|   ap_fifo  |     threshold    |    pointer   |
++--------------------------+-----+-----+------------+------------------+--------------+
+

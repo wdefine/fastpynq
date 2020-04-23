@@ -1,0 +1,8 @@
+xml
+rst
+.stamp
+*.sh
+*.pyc
+_themes
+_ext
+_templates

@@ -1,0 +1,126 @@
+
+
+================================================================
+== Vivado HLS Report for 'fast'
+================================================================
+* Date:           Thu Apr 23 12:10:34 2020
+
+* Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
+* Project:        fast
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020-clg484-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 10.00 ns | 7.117 ns |   2.70 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |      Interval     | Pipeline|
+    |   min   |   max   |    min    |    max    |   min   |   max   |   Type  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+    |  8361897|  8361897| 83.619 ms | 83.619 ms |  8361897|  8361897|   none  |
+    +---------+---------+-----------+-----------+---------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 6.80>
+ST_1 : Operation 3 [1/1] (3.40ns)   --->   "%threshold_read = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %threshold)" [xf_fast_accel.cpp:68]   --->   Operation 3 'read' 'threshold_read' <Predicate = true> <Delay = 3.40> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%trunc_ln68 = trunc i32 %threshold_read to i8" [xf_fast_accel.cpp:68]   --->   Operation 4 'trunc' 'trunc_ln68' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (3.40ns)   --->   "%p_src_mat_rows_read = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %p_src_mat_rows)" [../vitis_lib/vision/L1/include/features/xf_fast.hpp:946->xf_fast_accel.cpp:68]   --->   Operation 5 'read' 'p_src_mat_rows_read' <Predicate = true> <Delay = 3.40> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%trunc_ln946 = trunc i32 %p_src_mat_rows_read to i16" [../vitis_lib/vision/L1/include/features/xf_fast.hpp:946->xf_fast_accel.cpp:68]   --->   Operation 6 'trunc' 'trunc_ln946' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (3.40ns)   --->   "%p_src_mat_cols_read = call i32 @_ssdm_op_Read.ap_fifo.i32P(i32* %p_src_mat_cols)" [../vitis_lib/vision/L1/include/features/xf_fast.hpp:946->xf_fast_accel.cpp:68]   --->   Operation 7 'read' 'p_src_mat_cols_read' <Predicate = true> <Delay = 3.40> <Core = "FIFO_SRL">   --->   Core 36 'FIFO_SRL' <Latency = 0> <II = 1> <Delay = 3.40> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 0> <FIFO>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%trunc_ln946_1 = trunc i32 %p_src_mat_cols_read to i16" [../vitis_lib/vision/L1/include/features/xf_fast.hpp:946->xf_fast_accel.cpp:68]   --->   Operation 8 'trunc' 'trunc_ln946_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [2/2] (3.40ns)   --->   "call fastcc void @xFFastCornerDetectio(i8* %p_src_mat_data_V, i1* %p_dst_mat_data_V, i16 %trunc_ln946, i16 %trunc_ln946_1, i8 %trunc_ln68)" [../vitis_lib/vision/L1/include/features/xf_fast.hpp:946->xf_fast_accel.cpp:68]   --->   Operation 9 'call' <Predicate = true> <Delay = 3.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 2 <SV = 1> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1* %p_dst_mat_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 10 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i8* %p_src_mat_data_V, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 11 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %threshold, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 12 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %p_src_mat_rows, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 13 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %p_src_mat_cols, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str, [11 x i8]* @ScalarProp_str)"   --->   Operation 14 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 15 [1/2] (0.00ns)   --->   "call fastcc void @xFFastCornerDetectio(i8* %p_src_mat_data_V, i1* %p_dst_mat_data_V, i16 %trunc_ln946, i16 %trunc_ln946_1, i8 %trunc_ln68)" [../vitis_lib/vision/L1/include/features/xf_fast.hpp:946->xf_fast_accel.cpp:68]   --->   Operation 15 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 16 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 16 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 2.7ns.
+
+ <State 1>: 6.8ns
+The critical path consists of the following:
+	fifo read on port 'threshold' (xf_fast_accel.cpp:68) [11]  (3.4 ns)
+	'call' operation ('call_ln946', ../vitis_lib/vision/L1/include/features/xf_fast.hpp:946->xf_fast_accel.cpp:68) to 'xFFastCornerDetectio' [17]  (3.4 ns)
+
+ <State 2>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

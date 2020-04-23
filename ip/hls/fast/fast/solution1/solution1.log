@@ -1,0 +1,283 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg484-2'
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'xf_fast_accel.cpp' ... 
+WARNING: [HLS 200-40] In file included from xf_fast_accel.cpp:1:
+In file included from xf_fast_accel.cpp:1:
+In file included from ./xf_fast_config.h:22:
+In file included from ../vitis_lib/vision/L1/include/common/xf_common.hpp:20:
+../vitis_lib/vision/L1/include/common/xf_structs.hpp:440:33: warning: unknown attribute 'xcl_array_geometry' ignored [-Wattributes]
+    DATATYPE* data __attribute((xcl_array_geometry(
+                                ^
+1 warning generated.
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../vitis_lib/vision/L1/include/common/xf_utility.hpp:301:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../vitis_lib/vision/L1/include/common/xf_utility.hpp:338:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../vitis_lib/vision/L1/include/common/xf_utility.hpp:442:2
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region: ../vitis_lib/vision/L1/include/common/xf_utility.hpp:482:2
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: ../vitis_lib/vision/L1/include/features/xf_fast.hpp:923:23
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body: ../vitis_lib/vision/L1/include/features/xf_fast.hpp:925:13
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: ../vitis_lib/vision/L1/include/features/xf_fast.hpp:920:9
+WARNING: [HLS 214-104] Only for-loops and functions support the dataflow: ../vitis_lib/vision/L1/include/features/xf_fast.hpp:928:9
+WARNING: [HLS 200-471] Dataflow form checks found 8 issue(s) in file xf_fast_accel.cpp
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 6049 ; free virtual = 55189
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:45 ; elapsed = 00:00:55 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 6056 ; free virtual = 55197
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-489] Unrolling loop 'Loop-7.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:865) in function 'void xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>(xf::cv::Mat<FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE>&, xf::cv::Mat<FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE, FORWARD_REFERENCE>&, ap_uint<8>, unsigned short, unsigned short)' completely with a factor of 1.
+INFO: [XFORM 203-603] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::init' into 'xf::cv::Mat<0, 2160, 3840, 1>::Mat.1' (../vitis_lib/vision/L1/include/common/xf_structs.hpp:650).
+INFO: [XFORM 203-603] Inlining function 'xf::cv::xFCoreScore' into 'xf::cv::xFfastProc<1, 1, 0, 7, 49>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:203).
+INFO: [XFORM 203-603] Inlining function 'xf::cv::xFfastProc<1, 1, 0, 7, 49>' into 'xf::cv::ProcessFast<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:426).
+INFO: [XFORM 203-603] Inlining function 'xf::cv::ProcessFast<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' into 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:541).
+INFO: [XFORM 203-603] Inlining function 'xf::cv::xFnmsProc<1, 0, 3, 9>' into 'xf::cv::Processfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:776).
+INFO: [XFORM 203-603] Inlining function 'xf::cv::Processfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' into 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:881).
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 6052 ; free virtual = 55193
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::read' into 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:516) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::write' into 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:435->../vitis_lib/vision/L1/include/features/xf_fast.hpp:541) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::read' into 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:856) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::write' into 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:779->../vitis_lib/vision/L1/include/features/xf_fast.hpp:881) automatically.
+WARNING: [SYNCHK 200-23] ../vitis_lib/vision/L1/include/features/xf_fast.hpp:204: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:48 ; elapsed = 00:00:59 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 6033 ; free virtual = 55173
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'dst.data.V' (xf_fast_accel.cpp:40).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'src.data.V' (xf_fast_accel.cpp:40).
+WARNING: [XFORM 203-505] Ignore pipeline pragma in Loop whose tripcount is only 1 (../vitis_lib/vision/L1/include/features/xf_fast.hpp:126) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Col_Loop' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:630) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Col_Loop' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:265) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' for pipelining.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 2 for loop 'Loop-3-1-2-0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:789:1) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 3 to 2 for loop 'Loop-3-1-2-0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:789:1) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 3 to 2 for loop 'Loop-3-2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:889:1) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 3 to 2 for loop 'Loop-3-2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:889:1) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 7 to 3 for loop 'Loop-2-0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:527:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 7 to 3 for loop 'Loop-2-0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:527:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 25 to 24 for loop 'Loop-3-1-4-1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:189:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 24 for loop 'Loop-3-1-4-1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:189:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 0 to 1 for loop 'Loop-3-1-4' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:124:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 7 to 6 for loop 'Loop-3-1-5-0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:445:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 7 to 6 for loop 'Loop-3-1-5-0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:445:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop upper bound from 7 to 6 for loop 'Loop-3-2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:549:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+WARNING: [XFORM 203-561] Updating loop lower bound from 7 to 6 for loop 'Loop-3-2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:549:1) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>'.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:616) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:621) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:753) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:764) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.3' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:781) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.3.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:786) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.3' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:887) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:525) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 3.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:251) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.1.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:256) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:402) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:413) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'memset_flag_d' in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'memset_flag_d' in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 24.
+INFO: [HLS 200-489] Unrolling loop 'memset_flag_val' in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 0.
+INFO: [HLS 200-489] Unrolling loop 'memset_flag_val' in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 24.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:122) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:158) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:187) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 24.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.3' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:48) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 24.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.4' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:53) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 22.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.5' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:58) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 18.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.6' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:65) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.5.7' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:80) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 8.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.6' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:437) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 7.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.2.6.1' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:442) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 6.
+INFO: [HLS 200-489] Unrolling loop 'Loop-4.3' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:547) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>' completely with a factor of 6.
+INFO: [XFORM 203-102] Partitioning array 'flag_d_min2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:41) automatically.
+INFO: [XFORM 203-102] Partitioning array 'flag_d_max2' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:42) automatically.
+INFO: [XFORM 203-102] Partitioning array 'flag_d_min4' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:43) automatically.
+INFO: [XFORM 203-102] Partitioning array 'flag_d_max4' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:44) automatically.
+INFO: [XFORM 203-102] Partitioning array 'flag_d_min8' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:45) automatically.
+INFO: [XFORM 203-102] Partitioning array 'flag_d_max8' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:46) automatically.
+INFO: [XFORM 203-101] Partitioning array 'row_ind.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:465) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'OutputValues.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:474) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:487) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_cop.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:239) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'flag_val' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:115) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'flag_d' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:115) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'row_ind.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:808) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'OutputValues.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:815) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:828) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'buf_cop.V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:604) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf'  in dimension 2 completely.
+INFO: [XFORM 203-101] Partitioning array 'src_buf'  in dimension 2 completely.
+INFO: [XFORM 203-102] Partitioning array 'flag_val.0' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:115) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::read' into 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>56' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:516) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::write' into 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>56' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:435->../vitis_lib/vision/L1/include/features/xf_fast.hpp:541) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::read' into 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>57' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:856) automatically.
+INFO: [XFORM 203-602] Inlining function 'xf::cv::Mat<0, 2160, 3840, 1>::write' into 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>57' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:779->../vitis_lib/vision/L1/include/features/xf_fast.hpp:881) automatically.
+WARNING: [XFORM 203-713] All the elements of global array 'src_mat.data.V' should be updated in process function 'axis2xfMat', otherwise it may not be synthesized correctly.
+WARNING: [XFORM 203-713] All the elements of global array 'dst_mat.data.V' should be updated in process function 'xf::cv::fast<1, 0, 2160, 3840, 1>', otherwise it may not be synthesized correctly.
+INFO: [XFORM 203-712] Applying dataflow to function 'xf::cv::xFFastCornerDetection<0, 2160, 3840, 0, 1, 1, 12, 1>', detected/extracted 2 process function(s): 
+	 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>56'
+	 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>57'.
+INFO: [XFORM 203-712] Applying dataflow to function 'fast_accel', detected/extracted 4 process function(s): 
+	 'Block_Mat.exit73_proc69'
+	 'axis2xfMat'
+	 'xf::cv::fast<1, 0, 2160, 3840, 1>'
+	 'xfMat2axis'.
+WARNING: [XFORM 203-124] Array  '_dst.data.V': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'src_mat.data.V': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+WARNING: [XFORM 203-124] Array  'dst_mat.data.V': may have improper streaming access(es), possible reasons: (1) some entries are accessed more than once; (2) some entries are not used; (3) the entries are not accessed in sequential order.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../vitis_lib/vision/L1/include/features/xf_fast.hpp:759:101) to (../vitis_lib/vision/L1/include/features/xf_fast.hpp:778:17) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>5783'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../vitis_lib/vision/L1/include/features/xf_fast.hpp:759:101) to (../vitis_lib/vision/L1/include/features/xf_fast.hpp:778:17) in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>5781'... converting 12 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../vitis_lib/vision/L1/include/features/xf_fast.hpp:408:101) to (../vitis_lib/vision/L1/include/features/xf_fast.hpp:434:17) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>5684'... converting 91 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (../vitis_lib/vision/L1/include/features/xf_fast.hpp:408:101) to (../vitis_lib/vision/L1/include/features/xf_fast.hpp:434:17) in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>5682'... converting 91 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>5781' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:507:47)...8 expression(s) balanced.
+INFO: [XFORM 203-11] Balancing expressions in function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>5682' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:37:47)...19 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:55 ; elapsed = 00:01:07 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 6006 ; free virtual = 55147
+WARNING: [XFORM 203-631] Renaming function 'xf::cv::xFfastnms<0, 2160, 3840, 0, 1, 1, 3841, 3, 9>5781' to 'xFfastnms5781' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:507:47)
+WARNING: [XFORM 203-631] Renaming function 'xf::cv::xFfast7x7<0, 2160, 3840, 0, 1, 1, 3843, 7, 49>5682' to 'xFfast7x75682' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:37:47)
+WARNING: [XFORM 203-631] Renaming function 'xf::cv::xFFastCornerDetection<0, 2160, 3840, 0, 1, 1, 12, 1>' to 'xFFastCornerDetectio' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:914:1)
+WARNING: [XFORM 203-631] Renaming function 'xf::cv::fast<1, 0, 2160, 3840, 1>' to 'fast' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:68:2)
+WARNING: [XFORM 203-631] Renaming function 'Block_Mat.exit73_proc69' to 'Block_Mat.exit73_pro' (xf_fast_accel.cpp:51)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf[0].V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:870:35)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf[0].V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:856:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf[0].V' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:637:47)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf[0].V.i' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:530:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf[0].V.i' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:516:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'buf[0].V.i' (../vitis_lib/vision/L1/include/features/xf_fast.hpp:272:47)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:58 ; elapsed = 00:01:10 . Memory (MB): peak = 0.000 ; gain = 0.000 ; free physical = 5945 ; free virtual = 55085
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'fast_accel' ...
+WARNING: [SYN 201-103] Legalizing function name 'Block_Mat.exit73_pro' to 'Block_Mat_exit73_pro'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'Block_Mat_exit73_pro' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 70.34 seconds; current allocated memory: 227.875 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.26 seconds; current allocated memory: 227.986 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'axis2xfMat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.73 seconds; current allocated memory: 228.133 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.31 seconds; current allocated memory: 228.308 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFfast7x75682' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'read_lines.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Col_Loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 13.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 3.36 seconds; current allocated memory: 231.511 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_0_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_1_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_2_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_3_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_4_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_5_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_6_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 2.36 seconds; current allocated memory: 235.996 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFfastnms5781' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'read_lines.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Col_Loop'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 3.78 seconds; current allocated memory: 237.454 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_0_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_1_V' will be ignored if a simpler one can be used.
+WARNING: [BIND 205-102] The specified resource core for memory 'buf_2_V' will be ignored if a simpler one can be used.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.77 seconds; current allocated memory: 238.359 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xFFastCornerDetectio' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.89 seconds; current allocated memory: 238.531 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.84 seconds; current allocated memory: 239.091 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fast' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.53 seconds; current allocated memory: 239.850 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 1.15 seconds; current allocated memory: 240.171 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'xfMat2axis' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 3.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 2.37 seconds; current allocated memory: 240.980 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.22 seconds; current allocated memory: 241.169 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'fast_accel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.34 seconds; current allocated memory: 241.358 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 3.12 seconds; current allocated memory: 242.585 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'Block_Mat_exit73_pro' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'Block_Mat_exit73_pro'.
+INFO: [HLS 200-111]  Elapsed time: 2.51 seconds; current allocated memory: 243.483 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'axis2xfMat' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'axis2xfMat'.
+INFO: [HLS 200-111]  Elapsed time: 0.5 seconds; current allocated memory: 244.180 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------

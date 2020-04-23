@@ -1,0 +1,16 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Thu Apr 23 12:28:29 2020
+| Host         : DESKTOP-PA1PQ63 running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'resizer_fast_accel_1_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of resizer_fast_accel_1_0 (xilinx.com:hls:fast_accel:1.0) from (Rev. 2004221638) to (Rev. 2004221703)
+
